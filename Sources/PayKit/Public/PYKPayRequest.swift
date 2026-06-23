@@ -10,3 +10,7 @@ open class PYKPayRequest: NSObject {
         super.init()
     }
 }
+
+protocol PYKRequestValidating {
+    func validationFailureResult() -> PYKPayResult?
+}

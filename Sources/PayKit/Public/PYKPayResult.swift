@@ -23,4 +23,29 @@ public final class PYKPayResult: NSObject {
         self.rawMessage = rawMessage
         super.init()
     }
+
+    static func success(channel: PYKPayChannel, rawCode: String? = nil, rawMessage: String? = nil) -> PYKPayResult {
+        PYKPayResult(status: .success, channel: channel, rawCode: rawCode, rawMessage: rawMessage)
+    }
+
+    static func cancelled(channel: PYKPayChannel, rawCode: String? = nil, rawMessage: String? = nil) -> PYKPayResult {
+        PYKPayResult(status: .cancelled, channel: channel, rawCode: rawCode, rawMessage: rawMessage)
+    }
+
+    static func failure(
+        channel: PYKPayChannel,
+        code: String,
+        message: String,
+        rawCode: String? = nil,
+        rawMessage: String? = nil
+    ) -> PYKPayResult {
+        let error = PYKPayError(code: code, message: message)
+        return PYKPayResult(
+            status: .failed,
+            channel: channel,
+            error: error,
+            rawCode: rawCode ?? code,
+            rawMessage: rawMessage ?? message
+        )
+    }
 }

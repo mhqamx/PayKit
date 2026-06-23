@@ -5,6 +5,7 @@ public enum PYKPayChannel: Int {
     case unknown = 0
     case wechat
     case alipay
+    case mock
 }
 
 @objc(PYKPayStatus)

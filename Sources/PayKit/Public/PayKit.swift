@@ -1,3 +1,5 @@
+import Foundation
+
 public enum PayKit {
     public static func setup(wechat: PYKWechatConfig?, alipay: PYKAlipayConfig?) {
         PYKPayKit.setup(wechat: wechat, alipay: alipay)
@@ -5,6 +7,14 @@ public enum PayKit {
 
     public static func pay(request: PYKPayRequest, completion: @escaping (PYKPayResult) -> Void) {
         PYKPayKit.pay(request: request, completion: completion)
+    }
+
+    public static func handleOpenURL(_ url: URL) -> Bool {
+        PYKPayKit.handleOpenURL(url)
+    }
+
+    public static func handleUserActivity(_ userActivity: NSUserActivity) -> Bool {
+        PYKPayKit.handleUserActivity(userActivity)
     }
 }
 

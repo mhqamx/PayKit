@@ -1,29 +1,110 @@
 # PayKit
 
-PayKit is an iOS payment SDK workspace for integrating WeChat Pay and Alipay
-client payment flows behind a shared Swift and Objective-C public API.
+PayKit is an iOS 15+ payment SDK that wraps WeChat Pay and Alipay client
+payment flows behind one Swift and Objective-C public API.
 
-## Workspace
+The SDK only handles client-side launch, callback routing and result
+normalization. A `success` result means the payment channel returned client-flow
+success. The merchant app must still confirm the final order status with its
+own backend.
 
-```text
-Sources/PayKit/Public/
-Sources/PayKit/Core/
-Sources/PayKit/Adapters/
-Demos/SwiftDemo/
-Demos/ObjCDemo/
-Distribution/
+## Swift
+
+```swift
+let wechat = PYKWechatConfig(appId: "wx-app-id", universalLink: "https://example.com/app/")
+let alipay = PYKAlipayConfig(appScheme: "paykit-demo")
+
+PayKit.setup(wechat: wechat, alipay: alipay)
+
+let request = PYKAlipayPayRequest(orderString: orderStringFromBackend, appScheme: "paykit-demo")
+PayKit.pay(request: request) { result in
+    switch result.status {
+    case .success:
+        // Client flow succeeded. Confirm final order state with your backend.
+        break
+    case .cancelled:
+        break
+    case .failed:
+        print(result.rawCode ?? "", result.rawMessage ?? "")
+    @unknown default:
+        break
+    }
+}
 ```
 
-The MVP deployment target for iOS is 15.0 or later. The Swift Package also
-declares macOS for local package testing only; the SDK product target remains
-the iOS PayKit SDK surface.
+Forward lifecycle callbacks from your app delegate:
 
-## Build Check
+```swift
+func application(_ app: UIApplication, open url: URL, options: [UIApplication.OpenURLOptionsKey: Any] = [:]) -> Bool {
+    PayKit.handleOpenURL(url)
+}
+
+func application(
+    _ application: UIApplication,
+    continue userActivity: NSUserActivity,
+    restorationHandler: @escaping ([UIUserActivityRestoring]?) -> Void
+) -> Bool {
+    PayKit.handleUserActivity(userActivity)
+}
+```
+
+## Objective-C
+
+```objc
+PYKWechatConfig *wechat = [[PYKWechatConfig alloc] initWithAppId:@"wx-app-id"
+                                                   universalLink:@"https://example.com/app/"];
+PYKAlipayConfig *alipay = [[PYKAlipayConfig alloc] initWithAppScheme:@"paykit-demo"];
+
+[PYKPayKit setupWithWechat:wechat alipay:alipay];
+
+PYKAlipayPayRequest *request = [[PYKAlipayPayRequest alloc] initWithOrderString:orderStringFromBackend
+                                                                      appScheme:@"paykit-demo"];
+
+[PYKPayKit payWithRequest:request completion:^(PYKPayResult *result) {
+    if (result.status == PYKPayStatusSuccess) {
+        // Client flow succeeded. Confirm final order state with your backend.
+    } else if (result.status == PYKPayStatusCancelled) {
+        // User cancelled.
+    } else {
+        NSLog(@"Pay failed: %@ %@", result.rawCode, result.rawMessage);
+    }
+}];
+```
+
+Forward URL callbacks:
+
+```objc
+- (BOOL)application:(UIApplication *)app
+            openURL:(NSURL *)url
+            options:(NSDictionary<UIApplicationOpenURLOptionsKey,id> *)options {
+    return [PYKPayKit handleOpenURL:url];
+}
+```
+
+## Distribution
+
+Build check:
 
 ```sh
 swift test
 ```
 
-Future stories add the public `PYK*` Objective-C-visible API, Swift facade,
-callback router, channel adapters, demos, CocoaPods support and XCFramework
-distribution.
+CocoaPods work starts from `Distribution/PayKit.podspec`.
+XCFramework output is produced by `Distribution/build-xcframework.sh` after
+setting `PAYKIT_XCODE_PROJECT` or `PAYKIT_XCODE_WORKSPACE` plus
+`PAYKIT_SCHEME`.
+
+PayKit does not vendor WechatOpenSDK or AlipaySDK binaries. Link the official
+native SDK artifacts in the host app or distribution package; PayKit detects
+their standard Objective-C runtime classes and invokes the channel launch and
+callback APIs through the adapter layer.
+
+## Troubleshooting
+
+- Missing request parameters return `PYKPayStatusFailed` with `rawCode`.
+- Unavailable native SDK integration returns channel-specific failed results.
+- If completion is not called after a channel app returns, verify URL
+  Scheme/Universal Link forwarding reaches `PayKit.handleOpenURL` or
+  `PayKit.handleUserActivity`.
+- Do not call `WeChatPayAdapter`, `AlipayAdapter`, WechatOpenSDK or AlipaySDK
+  directly from app code.
