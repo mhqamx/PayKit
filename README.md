@@ -81,6 +81,31 @@ Forward URL callbacks:
 }
 ```
 
+## Demos
+
+The repository includes complete iOS demo projects that customers can open in
+Xcode:
+
+```sh
+open Demos/SwiftDemo/SwiftDemo.xcodeproj
+open Demos/ObjCDemo/ObjCDemo.xcodeproj
+```
+
+Both demos use the local PayKit Swift Package dependency and include:
+
+- app startup configuration for WeChat and Alipay
+- URL Scheme and Universal Link forwarding
+- WeChat typed request creation
+- Alipay typed request creation
+- unified result display
+
+Build checks:
+
+```sh
+xcodebuild -project Demos/SwiftDemo/SwiftDemo.xcodeproj -scheme SwiftDemo -sdk iphonesimulator -destination 'generic/platform=iOS Simulator' build
+xcodebuild -project Demos/ObjCDemo/ObjCDemo.xcodeproj -scheme ObjCDemo -sdk iphonesimulator -destination 'generic/platform=iOS Simulator' build
+```
+
 ## Distribution
 
 Build check:

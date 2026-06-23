@@ -1,0 +1,23 @@
+name: ObjCDemo
+options:
+  bundleIdPrefix: com.paykit.demo
+  deploymentTarget:
+    iOS: "15.0"
+packages:
+  PayKit:
+    path: ../..
+targets:
+  ObjCDemo:
+    type: application
+    platform: iOS
+    deploymentTarget: "15.0"
+    sources:
+      - Sources
+    dependencies:
+      - package: PayKit
+    settings:
+      base:
+        PRODUCT_BUNDLE_IDENTIFIER: com.paykit.demo.objc
+        INFOPLIST_FILE: Resources/Info.plist
+        CLANG_ENABLE_MODULES: YES
+        TARGETED_DEVICE_FAMILY: "1,2"

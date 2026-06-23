@@ -9,6 +9,8 @@ Minimum iOS: 15.0
 - `swift build` passed.
 - `swift test` passed with 17 XCTest tests and 0 failures.
 - CocoaPods parsed `Distribution/PayKit.podspec` through `pod ipc spec`.
+- `Demos/SwiftDemo/SwiftDemo.xcodeproj` builds for generic iOS Simulator.
+- `Demos/ObjCDemo/ObjCDemo.xcodeproj` builds for generic iOS Simulator.
 - Generated Objective-C compatibility header exposes:
   - `PYKPayKit`
   - `PYKWechatPayRequest`

@@ -1,0 +1,23 @@
+name: SwiftDemo
+options:
+  bundleIdPrefix: com.paykit.demo
+  deploymentTarget:
+    iOS: "15.0"
+packages:
+  PayKit:
+    path: ../..
+targets:
+  SwiftDemo:
+    type: application
+    platform: iOS
+    deploymentTarget: "15.0"
+    sources:
+      - Sources
+    dependencies:
+      - package: PayKit
+    settings:
+      base:
+        PRODUCT_BUNDLE_IDENTIFIER: com.paykit.demo.swift
+        INFOPLIST_FILE: Resources/Info.plist
+        SWIFT_VERSION: "5.9"
+        TARGETED_DEVICE_FAMILY: "1,2"
