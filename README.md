@@ -142,5 +142,7 @@ callback APIs through the adapter layer.
 - If completion is not called after a channel app returns, verify URL
   Scheme/Universal Link forwarding reaches `PayKit.handleOpenURL` or
   `PayKit.handleUserActivity`.
+- If device builds fail in a CocoaPods `[CP]` script with a sandbox denial,
+  set `ENABLE_USER_SCRIPT_SANDBOXING=NO` on the app target.
 - Do not call `WeChatPayAdapter`, `AlipayAdapter`, WechatOpenSDK or AlipaySDK
   directly from app code.

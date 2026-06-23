@@ -36,3 +36,7 @@ open ObjCDemo.xcworkspace
 ```
 
 Open the `.xcworkspace`, not the `.xcodeproj`, after running CocoaPods.
+
+If Xcode upgrades the project settings, keep `ENABLE_USER_SCRIPT_SANDBOXING`
+set to `NO` on the demo app target. CocoaPods resource scripts need to write
+inside the `Pods/` directory during device builds.

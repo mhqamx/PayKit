@@ -16,3 +16,4 @@ targets:
         INFOPLIST_FILE: Resources/Info.plist
         SWIFT_VERSION: "5.9"
         TARGETED_DEVICE_FAMILY: "1,2"
+        ENABLE_USER_SCRIPT_SANDBOXING: NO
