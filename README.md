@@ -83,15 +83,25 @@ Forward URL callbacks:
 
 ## Demos
 
-The repository includes complete iOS demo projects that customers can open in
-Xcode:
+The repository includes complete CocoaPods-based iOS demo projects. Each demo
+integrates the in-repository PayKit SDK and PayKit brings in the official
+payment SDK pods:
 
-```sh
-open Demos/SwiftDemo/SwiftDemo.xcodeproj
-open Demos/ObjCDemo/ObjCDemo.xcodeproj
+```ruby
+pod 'PayKit', :path => '../..'
+# PayKit.podspec depends on:
+# - WechatOpenSDK-XCFramework
+# - AlipaySDK-iOS
 ```
 
-Both demos use the local PayKit Swift Package dependency and include:
+Run CocoaPods and open the workspace:
+
+```sh
+cd Demos/SwiftDemo && pod install && open SwiftDemo.xcworkspace
+cd Demos/ObjCDemo && pod install && open ObjCDemo.xcworkspace
+```
+
+Both demos include:
 
 - app startup configuration for WeChat and Alipay
 - URL Scheme and Universal Link forwarding
@@ -102,8 +112,8 @@ Both demos use the local PayKit Swift Package dependency and include:
 Build checks:
 
 ```sh
-xcodebuild -project Demos/SwiftDemo/SwiftDemo.xcodeproj -scheme SwiftDemo -sdk iphonesimulator -destination 'generic/platform=iOS Simulator' build
-xcodebuild -project Demos/ObjCDemo/ObjCDemo.xcodeproj -scheme ObjCDemo -sdk iphonesimulator -destination 'generic/platform=iOS Simulator' build
+xcodebuild -workspace Demos/SwiftDemo/SwiftDemo.xcworkspace -scheme SwiftDemo -sdk iphonesimulator -destination 'generic/platform=iOS Simulator' build
+xcodebuild -workspace Demos/ObjCDemo/ObjCDemo.xcworkspace -scheme ObjCDemo -sdk iphonesimulator -destination 'generic/platform=iOS Simulator' build
 ```
 
 ## Distribution
@@ -114,7 +124,8 @@ Build check:
 swift test
 ```
 
-CocoaPods work starts from `Distribution/PayKit.podspec`.
+CocoaPods work starts from `PayKit.podspec`; `Distribution/PayKit.podspec`
+loads the same spec for release packaging.
 XCFramework output is produced by `Distribution/build-xcframework.sh` after
 setting `PAYKIT_XCODE_PROJECT` or `PAYKIT_XCODE_WORKSPACE` plus
 `PAYKIT_SCHEME`.

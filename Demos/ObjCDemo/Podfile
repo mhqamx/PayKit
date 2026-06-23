@@ -1,0 +1,11 @@
+source 'https://cdn.cocoapods.org/'
+
+platform :ios, '15.0'
+use_frameworks! :linkage => :static
+
+target 'ObjCDemo' do
+  # Integrates the in-repository PayKit SDK. PayKit.podspec declares:
+  # - WechatOpenSDK-XCFramework
+  # - AlipaySDK-iOS
+  pod 'PayKit', :path => '../..'
+end

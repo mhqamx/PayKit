@@ -3,9 +3,6 @@ options:
   bundleIdPrefix: com.paykit.demo
   deploymentTarget:
     iOS: "15.0"
-packages:
-  PayKit:
-    path: ../..
 targets:
   ObjCDemo:
     type: application
@@ -13,8 +10,6 @@ targets:
     deploymentTarget: "15.0"
     sources:
       - Sources
-    dependencies:
-      - package: PayKit
     settings:
       base:
         PRODUCT_BUNDLE_IDENTIFIER: com.paykit.demo.objc
