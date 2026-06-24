@@ -1,0 +1,4992 @@
+{
+  "ABIRoot": {
+    "kind": "Root",
+    "name": "PayKit",
+    "printedName": "PayKit",
+    "children": [
+      {
+        "kind": "Import",
+        "name": "Foundation",
+        "printedName": "Foundation",
+        "declKind": "Import",
+        "moduleName": "PayKit"
+      },
+      {
+        "kind": "Import",
+        "name": "ObjectiveC.runtime",
+        "printedName": "ObjectiveC.runtime",
+        "declKind": "Import",
+        "moduleName": "PayKit"
+      },
+      {
+        "kind": "Import",
+        "name": "Foundation",
+        "printedName": "Foundation",
+        "declKind": "Import",
+        "moduleName": "PayKit"
+      },
+      {
+        "kind": "Import",
+        "name": "Foundation",
+        "printedName": "Foundation",
+        "declKind": "Import",
+        "moduleName": "PayKit"
+      },
+      {
+        "kind": "TypeDecl",
+        "name": "PYKAlipayConfig",
+        "printedName": "PYKAlipayConfig",
+        "children": [
+          {
+            "kind": "Var",
+            "name": "appScheme",
+            "printedName": "appScheme",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "String",
+                "printedName": "Swift.String",
+                "usr": "s:SS"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "c:@M@PayKit@objc(cs)PYKAlipayConfig(py)appScheme",
+            "mangledName": "$s6PayKit15PYKAlipayConfigC9appSchemeSSvp",
+            "moduleName": "PayKit",
+            "declAttributes": [
+              "Final",
+              "HasStorage",
+              "AccessControl",
+              "ObjC"
+            ],
+            "isLet": true,
+            "hasStorage": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "String",
+                    "printedName": "Swift.String",
+                    "usr": "s:SS"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "c:@M@PayKit@objc(cs)PYKAlipayConfig(im)appScheme",
+                "mangledName": "$s6PayKit15PYKAlipayConfigC9appSchemeSSvg",
+                "moduleName": "PayKit",
+                "implicit": true,
+                "declAttributes": [
+                  "Final",
+                  "ObjC"
+                ],
+                "accessorKind": "get"
+              }
+            ]
+          },
+          {
+            "kind": "Constructor",
+            "name": "init",
+            "printedName": "init(appScheme:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "PYKAlipayConfig",
+                "printedName": "PayKit.PYKAlipayConfig",
+                "usr": "c:@M@PayKit@objc(cs)PYKAlipayConfig"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "String",
+                "printedName": "Swift.String",
+                "usr": "s:SS"
+              }
+            ],
+            "declKind": "Constructor",
+            "usr": "c:@M@PayKit@objc(cs)PYKAlipayConfig(im)initWithAppScheme:",
+            "mangledName": "$s6PayKit15PYKAlipayConfigC9appSchemeACSS_tcfc",
+            "moduleName": "PayKit",
+            "declAttributes": [
+              "AccessControl",
+              "ObjC"
+            ],
+            "init_kind": "Designated"
+          },
+          {
+            "kind": "Constructor",
+            "name": "init",
+            "printedName": "init()",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "PYKAlipayConfig",
+                "printedName": "PayKit.PYKAlipayConfig",
+                "usr": "c:@M@PayKit@objc(cs)PYKAlipayConfig"
+              }
+            ],
+            "declKind": "Constructor",
+            "usr": "c:@M@PayKit@objc(cs)PYKAlipayConfig(im)init",
+            "mangledName": "$s6PayKit15PYKAlipayConfigCACycfc",
+            "moduleName": "PayKit",
+            "overriding": true,
+            "implicit": true,
+            "objc_name": "init",
+            "declAttributes": [
+              "Dynamic",
+              "ObjC",
+              "Override"
+            ],
+            "init_kind": "Designated"
+          }
+        ],
+        "declKind": "Class",
+        "usr": "c:@M@PayKit@objc(cs)PYKAlipayConfig",
+        "mangledName": "$s6PayKit15PYKAlipayConfigC",
+        "moduleName": "PayKit",
+        "objc_name": "PYKAlipayConfig",
+        "declAttributes": [
+          "Final",
+          "AccessControl",
+          "ObjC",
+          "ObjCMembers"
+        ],
+        "superclassUsr": "c:objc(cs)NSObject",
+        "superclassNames": [
+          "ObjectiveC.NSObject"
+        ],
+        "conformances": [
+          {
+            "kind": "Conformance",
+            "name": "_KeyValueCodingAndObserving",
+            "printedName": "_KeyValueCodingAndObserving",
+            "usr": "s:10Foundation27_KeyValueCodingAndObservingP",
+            "mangledName": "$s10Foundation27_KeyValueCodingAndObservingP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "_KeyValueCodingAndObservingPublishing",
+            "printedName": "_KeyValueCodingAndObservingPublishing",
+            "usr": "s:10Foundation37_KeyValueCodingAndObservingPublishingP",
+            "mangledName": "$s10Foundation37_KeyValueCodingAndObservingPublishingP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "CVarArg",
+            "printedName": "CVarArg",
+            "usr": "s:s7CVarArgP",
+            "mangledName": "$ss7CVarArgP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Copyable",
+            "printedName": "Copyable",
+            "usr": "s:s8CopyableP",
+            "mangledName": "$ss8CopyableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "CustomDebugStringConvertible",
+            "printedName": "CustomDebugStringConvertible",
+            "usr": "s:s28CustomDebugStringConvertibleP",
+            "mangledName": "$ss28CustomDebugStringConvertibleP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "CustomStringConvertible",
+            "printedName": "CustomStringConvertible",
+            "usr": "s:s23CustomStringConvertibleP",
+            "mangledName": "$ss23CustomStringConvertibleP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Equatable",
+            "printedName": "Equatable",
+            "usr": "s:SQ",
+            "mangledName": "$sSQ"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Escapable",
+            "printedName": "Escapable",
+            "usr": "s:s9EscapableP",
+            "mangledName": "$ss9EscapableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Hashable",
+            "printedName": "Hashable",
+            "usr": "s:SH",
+            "mangledName": "$sSH"
+          }
+        ]
+      },
+      {
+        "kind": "Import",
+        "name": "Foundation",
+        "printedName": "Foundation",
+        "declKind": "Import",
+        "moduleName": "PayKit"
+      },
+      {
+        "kind": "TypeDecl",
+        "name": "PYKAlipayPayRequest",
+        "printedName": "PYKAlipayPayRequest",
+        "children": [
+          {
+            "kind": "Var",
+            "name": "orderString",
+            "printedName": "orderString",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "String",
+                "printedName": "Swift.String",
+                "usr": "s:SS"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "c:@M@PayKit@objc(cs)PYKAlipayPayRequest(py)orderString",
+            "mangledName": "$s6PayKit09PYKAlipayA7RequestC11orderStringSSvp",
+            "moduleName": "PayKit",
+            "declAttributes": [
+              "Final",
+              "HasStorage",
+              "AccessControl",
+              "ObjC"
+            ],
+            "isLet": true,
+            "hasStorage": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "String",
+                    "printedName": "Swift.String",
+                    "usr": "s:SS"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "c:@M@PayKit@objc(cs)PYKAlipayPayRequest(im)orderString",
+                "mangledName": "$s6PayKit09PYKAlipayA7RequestC11orderStringSSvg",
+                "moduleName": "PayKit",
+                "implicit": true,
+                "declAttributes": [
+                  "Final",
+                  "ObjC"
+                ],
+                "accessorKind": "get"
+              }
+            ]
+          },
+          {
+            "kind": "Var",
+            "name": "appScheme",
+            "printedName": "appScheme",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "String",
+                "printedName": "Swift.String",
+                "usr": "s:SS"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "c:@M@PayKit@objc(cs)PYKAlipayPayRequest(py)appScheme",
+            "mangledName": "$s6PayKit09PYKAlipayA7RequestC9appSchemeSSvp",
+            "moduleName": "PayKit",
+            "declAttributes": [
+              "Final",
+              "HasStorage",
+              "AccessControl",
+              "ObjC"
+            ],
+            "isLet": true,
+            "hasStorage": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "String",
+                    "printedName": "Swift.String",
+                    "usr": "s:SS"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "c:@M@PayKit@objc(cs)PYKAlipayPayRequest(im)appScheme",
+                "mangledName": "$s6PayKit09PYKAlipayA7RequestC9appSchemeSSvg",
+                "moduleName": "PayKit",
+                "implicit": true,
+                "declAttributes": [
+                  "Final",
+                  "ObjC"
+                ],
+                "accessorKind": "get"
+              }
+            ]
+          },
+          {
+            "kind": "Constructor",
+            "name": "init",
+            "printedName": "init(orderString:appScheme:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "PYKAlipayPayRequest",
+                "printedName": "PayKit.PYKAlipayPayRequest",
+                "usr": "c:@M@PayKit@objc(cs)PYKAlipayPayRequest"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "String",
+                "printedName": "Swift.String",
+                "usr": "s:SS"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "String",
+                "printedName": "Swift.String",
+                "usr": "s:SS"
+              }
+            ],
+            "declKind": "Constructor",
+            "usr": "c:@M@PayKit@objc(cs)PYKAlipayPayRequest(im)initWithOrderString:appScheme:",
+            "mangledName": "$s6PayKit09PYKAlipayA7RequestC11orderString9appSchemeACSS_SStcfc",
+            "moduleName": "PayKit",
+            "declAttributes": [
+              "AccessControl",
+              "ObjC"
+            ],
+            "init_kind": "Designated"
+          },
+          {
+            "kind": "Constructor",
+            "name": "init",
+            "printedName": "init(channel:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "PYKAlipayPayRequest",
+                "printedName": "PayKit.PYKAlipayPayRequest",
+                "usr": "c:@M@PayKit@objc(cs)PYKAlipayPayRequest"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "PYKPayChannel",
+                "printedName": "PayKit.PYKPayChannel",
+                "usr": "c:@M@PayKit@E@PYKPayChannel"
+              }
+            ],
+            "declKind": "Constructor",
+            "usr": "c:@M@PayKit@objc(cs)PYKAlipayPayRequest(im)initWithChannel:",
+            "mangledName": "$s6PayKit09PYKAlipayA7RequestC7channelAcA13PYKPayChannelO_tcfc",
+            "moduleName": "PayKit",
+            "overriding": true,
+            "implicit": true,
+            "objc_name": "initWithChannel:",
+            "declAttributes": [
+              "ObjC",
+              "Override"
+            ],
+            "init_kind": "Designated"
+          }
+        ],
+        "declKind": "Class",
+        "usr": "c:@M@PayKit@objc(cs)PYKAlipayPayRequest",
+        "mangledName": "$s6PayKit09PYKAlipayA7RequestC",
+        "moduleName": "PayKit",
+        "objc_name": "PYKAlipayPayRequest",
+        "declAttributes": [
+          "Final",
+          "AccessControl",
+          "ObjC",
+          "ObjCMembers"
+        ],
+        "superclassUsr": "c:@M@PayKit@objc(cs)PYKPayRequest",
+        "superclassNames": [
+          "PayKit.PYKPayRequest",
+          "ObjectiveC.NSObject"
+        ],
+        "conformances": [
+          {
+            "kind": "Conformance",
+            "name": "_KeyValueCodingAndObserving",
+            "printedName": "_KeyValueCodingAndObserving",
+            "usr": "s:10Foundation27_KeyValueCodingAndObservingP",
+            "mangledName": "$s10Foundation27_KeyValueCodingAndObservingP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "_KeyValueCodingAndObservingPublishing",
+            "printedName": "_KeyValueCodingAndObservingPublishing",
+            "usr": "s:10Foundation37_KeyValueCodingAndObservingPublishingP",
+            "mangledName": "$s10Foundation37_KeyValueCodingAndObservingPublishingP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "CVarArg",
+            "printedName": "CVarArg",
+            "usr": "s:s7CVarArgP",
+            "mangledName": "$ss7CVarArgP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Copyable",
+            "printedName": "Copyable",
+            "usr": "s:s8CopyableP",
+            "mangledName": "$ss8CopyableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "CustomDebugStringConvertible",
+            "printedName": "CustomDebugStringConvertible",
+            "usr": "s:s28CustomDebugStringConvertibleP",
+            "mangledName": "$ss28CustomDebugStringConvertibleP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "CustomStringConvertible",
+            "printedName": "CustomStringConvertible",
+            "usr": "s:s23CustomStringConvertibleP",
+            "mangledName": "$ss23CustomStringConvertibleP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Equatable",
+            "printedName": "Equatable",
+            "usr": "s:SQ",
+            "mangledName": "$sSQ"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Escapable",
+            "printedName": "Escapable",
+            "usr": "s:s9EscapableP",
+            "mangledName": "$ss9EscapableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Hashable",
+            "printedName": "Hashable",
+            "usr": "s:SH",
+            "mangledName": "$sSH"
+          }
+        ]
+      },
+      {
+        "kind": "Import",
+        "name": "Foundation",
+        "printedName": "Foundation",
+        "declKind": "Import",
+        "moduleName": "PayKit"
+      },
+      {
+        "kind": "TypeDecl",
+        "name": "PYKPayError",
+        "printedName": "PYKPayError",
+        "children": [
+          {
+            "kind": "Var",
+            "name": "code",
+            "printedName": "code",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "String",
+                "printedName": "Swift.String",
+                "usr": "s:SS"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "c:@M@PayKit@objc(cs)PYKPayError(py)code",
+            "mangledName": "$s6PayKit11PYKPayErrorC4codeSSvp",
+            "moduleName": "PayKit",
+            "declAttributes": [
+              "Final",
+              "HasStorage",
+              "AccessControl",
+              "ObjC"
+            ],
+            "isLet": true,
+            "hasStorage": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "String",
+                    "printedName": "Swift.String",
+                    "usr": "s:SS"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "c:@M@PayKit@objc(cs)PYKPayError(im)code",
+                "mangledName": "$s6PayKit11PYKPayErrorC4codeSSvg",
+                "moduleName": "PayKit",
+                "implicit": true,
+                "declAttributes": [
+                  "Final",
+                  "ObjC"
+                ],
+                "accessorKind": "get"
+              }
+            ]
+          },
+          {
+            "kind": "Var",
+            "name": "message",
+            "printedName": "message",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "String",
+                "printedName": "Swift.String",
+                "usr": "s:SS"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "c:@M@PayKit@objc(cs)PYKPayError(py)message",
+            "mangledName": "$s6PayKit11PYKPayErrorC7messageSSvp",
+            "moduleName": "PayKit",
+            "declAttributes": [
+              "Final",
+              "HasStorage",
+              "AccessControl",
+              "ObjC"
+            ],
+            "isLet": true,
+            "hasStorage": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "String",
+                    "printedName": "Swift.String",
+                    "usr": "s:SS"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "c:@M@PayKit@objc(cs)PYKPayError(im)message",
+                "mangledName": "$s6PayKit11PYKPayErrorC7messageSSvg",
+                "moduleName": "PayKit",
+                "implicit": true,
+                "declAttributes": [
+                  "Final",
+                  "ObjC"
+                ],
+                "accessorKind": "get"
+              }
+            ]
+          },
+          {
+            "kind": "Constructor",
+            "name": "init",
+            "printedName": "init(code:message:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "PYKPayError",
+                "printedName": "PayKit.PYKPayError",
+                "usr": "c:@M@PayKit@objc(cs)PYKPayError"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "String",
+                "printedName": "Swift.String",
+                "usr": "s:SS"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "String",
+                "printedName": "Swift.String",
+                "usr": "s:SS"
+              }
+            ],
+            "declKind": "Constructor",
+            "usr": "c:@M@PayKit@objc(cs)PYKPayError(im)initWithCode:message:",
+            "mangledName": "$s6PayKit11PYKPayErrorC4code7messageACSS_SStcfc",
+            "moduleName": "PayKit",
+            "declAttributes": [
+              "AccessControl",
+              "ObjC"
+            ],
+            "init_kind": "Designated"
+          },
+          {
+            "kind": "Constructor",
+            "name": "init",
+            "printedName": "init()",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "PYKPayError",
+                "printedName": "PayKit.PYKPayError",
+                "usr": "c:@M@PayKit@objc(cs)PYKPayError"
+              }
+            ],
+            "declKind": "Constructor",
+            "usr": "c:@M@PayKit@objc(cs)PYKPayError(im)init",
+            "mangledName": "$s6PayKit11PYKPayErrorCACycfc",
+            "moduleName": "PayKit",
+            "overriding": true,
+            "implicit": true,
+            "objc_name": "init",
+            "declAttributes": [
+              "Dynamic",
+              "ObjC",
+              "Override"
+            ],
+            "init_kind": "Designated"
+          }
+        ],
+        "declKind": "Class",
+        "usr": "c:@M@PayKit@objc(cs)PYKPayError",
+        "mangledName": "$s6PayKit11PYKPayErrorC",
+        "moduleName": "PayKit",
+        "objc_name": "PYKPayError",
+        "declAttributes": [
+          "Final",
+          "AccessControl",
+          "ObjC",
+          "ObjCMembers"
+        ],
+        "superclassUsr": "c:objc(cs)NSObject",
+        "superclassNames": [
+          "ObjectiveC.NSObject"
+        ],
+        "conformances": [
+          {
+            "kind": "Conformance",
+            "name": "_KeyValueCodingAndObserving",
+            "printedName": "_KeyValueCodingAndObserving",
+            "usr": "s:10Foundation27_KeyValueCodingAndObservingP",
+            "mangledName": "$s10Foundation27_KeyValueCodingAndObservingP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "_KeyValueCodingAndObservingPublishing",
+            "printedName": "_KeyValueCodingAndObservingPublishing",
+            "usr": "s:10Foundation37_KeyValueCodingAndObservingPublishingP",
+            "mangledName": "$s10Foundation37_KeyValueCodingAndObservingPublishingP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "CVarArg",
+            "printedName": "CVarArg",
+            "usr": "s:s7CVarArgP",
+            "mangledName": "$ss7CVarArgP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Copyable",
+            "printedName": "Copyable",
+            "usr": "s:s8CopyableP",
+            "mangledName": "$ss8CopyableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "CustomDebugStringConvertible",
+            "printedName": "CustomDebugStringConvertible",
+            "usr": "s:s28CustomDebugStringConvertibleP",
+            "mangledName": "$ss28CustomDebugStringConvertibleP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "CustomStringConvertible",
+            "printedName": "CustomStringConvertible",
+            "usr": "s:s23CustomStringConvertibleP",
+            "mangledName": "$ss23CustomStringConvertibleP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Equatable",
+            "printedName": "Equatable",
+            "usr": "s:SQ",
+            "mangledName": "$sSQ"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Escapable",
+            "printedName": "Escapable",
+            "usr": "s:s9EscapableP",
+            "mangledName": "$ss9EscapableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Hashable",
+            "printedName": "Hashable",
+            "usr": "s:SH",
+            "mangledName": "$sSH"
+          }
+        ]
+      },
+      {
+        "kind": "Import",
+        "name": "Foundation",
+        "printedName": "Foundation",
+        "declKind": "Import",
+        "moduleName": "PayKit"
+      },
+      {
+        "kind": "TypeDecl",
+        "name": "PYKPayKit",
+        "printedName": "PYKPayKit",
+        "children": [
+          {
+            "kind": "Constructor",
+            "name": "init",
+            "printedName": "init()",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "PYKPayKit",
+                "printedName": "PayKit.PYKPayKit",
+                "usr": "c:@M@PayKit@objc(cs)PYKPayKit"
+              }
+            ],
+            "declKind": "Constructor",
+            "usr": "c:@M@PayKit@objc(cs)PYKPayKit(im)init",
+            "mangledName": "$s6PayKit06PYKPayB0CACycfc",
+            "moduleName": "PayKit",
+            "overriding": true,
+            "objc_name": "init",
+            "declAttributes": [
+              "Dynamic",
+              "ObjC",
+              "Override",
+              "AccessControl"
+            ],
+            "init_kind": "Designated"
+          },
+          {
+            "kind": "Function",
+            "name": "setup",
+            "printedName": "setup(wechat:alipay:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "PayKit.PYKWechatConfig?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "PYKWechatConfig",
+                    "printedName": "PayKit.PYKWechatConfig",
+                    "usr": "c:@M@PayKit@objc(cs)PYKWechatConfig"
+                  }
+                ],
+                "usr": "s:Sq"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "PayKit.PYKAlipayConfig?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "PYKAlipayConfig",
+                    "printedName": "PayKit.PYKAlipayConfig",
+                    "usr": "c:@M@PayKit@objc(cs)PYKAlipayConfig"
+                  }
+                ],
+                "usr": "s:Sq"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "c:@M@PayKit@objc(cs)PYKPayKit(cm)setupWithWechat:alipay:",
+            "mangledName": "$s6PayKit06PYKPayB0C5setup6wechat6alipayyAA15PYKWechatConfigCSg_AA09PYKAlipayH0CSgtFZ",
+            "moduleName": "PayKit",
+            "static": true,
+            "objc_name": "setupWithWechat:alipay:",
+            "declAttributes": [
+              "Final",
+              "AccessControl",
+              "ObjC"
+            ],
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "pay",
+            "printedName": "pay(request:completion:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "PYKPayRequest",
+                "printedName": "PayKit.PYKPayRequest",
+                "usr": "c:@M@PayKit@objc(cs)PYKPayRequest"
+              },
+              {
+                "kind": "TypeFunc",
+                "name": "Function",
+                "printedName": "(PayKit.PYKPayResult) -> ()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "PYKPayResult",
+                    "printedName": "PayKit.PYKPayResult",
+                    "usr": "c:@M@PayKit@objc(cs)PYKPayResult"
+                  }
+                ]
+              }
+            ],
+            "declKind": "Func",
+            "usr": "c:@M@PayKit@objc(cs)PYKPayKit(cm)payWithRequest:completion:",
+            "mangledName": "$s6PayKit06PYKPayB0C3pay7request10completionyAA0C7RequestC_yAA0C6ResultCctFZ",
+            "moduleName": "PayKit",
+            "static": true,
+            "objc_name": "payWithRequest:completion:",
+            "declAttributes": [
+              "Final",
+              "AccessControl",
+              "ObjC"
+            ],
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "handleOpenURL",
+            "printedName": "handleOpenURL(_:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Bool",
+                "printedName": "Swift.Bool",
+                "usr": "s:Sb"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "URL",
+                "printedName": "Foundation.URL",
+                "usr": "s:10Foundation3URLV"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "c:@M@PayKit@objc(cs)PYKPayKit(cm)handleOpenURL:",
+            "mangledName": "$s6PayKit06PYKPayB0C13handleOpenURLySb10Foundation0F0VFZ",
+            "moduleName": "PayKit",
+            "static": true,
+            "objc_name": "handleOpenURL:",
+            "declAttributes": [
+              "Final",
+              "AccessControl",
+              "ObjC"
+            ],
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "handleUserActivity",
+            "printedName": "handleUserActivity(_:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Bool",
+                "printedName": "Swift.Bool",
+                "usr": "s:Sb"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "NSUserActivity",
+                "printedName": "Foundation.NSUserActivity",
+                "usr": "c:objc(cs)NSUserActivity"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "c:@M@PayKit@objc(cs)PYKPayKit(cm)handleUserActivity:",
+            "mangledName": "$s6PayKit06PYKPayB0C18handleUserActivityySbSo06NSUserF0CFZ",
+            "moduleName": "PayKit",
+            "static": true,
+            "objc_name": "handleUserActivity:",
+            "declAttributes": [
+              "Final",
+              "AccessControl",
+              "ObjC"
+            ],
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "presentPaymentSheet",
+            "printedName": "presentPaymentSheet(from:configuration:requestProvider:completion:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "UIViewController",
+                "printedName": "UIKit.UIViewController",
+                "usr": "c:objc(cs)UIViewController"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "PYKPaymentSheetConfiguration",
+                "printedName": "PayKit.PYKPaymentSheetConfiguration",
+                "usr": "c:@M@PayKit@objc(cs)PYKPaymentSheetConfiguration"
+              },
+              {
+                "kind": "TypeFunc",
+                "name": "Function",
+                "printedName": "(PayKit.PYKPayChannel, @escaping (PayKit.PYKPayRequest?, (any Swift.Error)?) -> ()) -> ()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Tuple",
+                    "printedName": "(PayKit.PYKPayChannel, (PayKit.PYKPayRequest?, (any Swift.Error)?) -> ())",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "PYKPayChannel",
+                        "printedName": "PayKit.PYKPayChannel",
+                        "usr": "c:@M@PayKit@E@PYKPayChannel"
+                      },
+                      {
+                        "kind": "TypeFunc",
+                        "name": "Function",
+                        "printedName": "(PayKit.PYKPayRequest?, (any Swift.Error)?) -> ()",
+                        "children": [
+                          {
+                            "kind": "TypeNominal",
+                            "name": "Void",
+                            "printedName": "()"
+                          },
+                          {
+                            "kind": "TypeNominal",
+                            "name": "Tuple",
+                            "printedName": "(PayKit.PYKPayRequest?, (any Swift.Error)?)",
+                            "children": [
+                              {
+                                "kind": "TypeNominal",
+                                "name": "Optional",
+                                "printedName": "PayKit.PYKPayRequest?",
+                                "children": [
+                                  {
+                                    "kind": "TypeNominal",
+                                    "name": "PYKPayRequest",
+                                    "printedName": "PayKit.PYKPayRequest",
+                                    "usr": "c:@M@PayKit@objc(cs)PYKPayRequest"
+                                  }
+                                ],
+                                "usr": "s:Sq"
+                              },
+                              {
+                                "kind": "TypeNominal",
+                                "name": "Optional",
+                                "printedName": "(any Swift.Error)?",
+                                "children": [
+                                  {
+                                    "kind": "TypeNominal",
+                                    "name": "Error",
+                                    "printedName": "any Swift.Error",
+                                    "usr": "s:s5ErrorP"
+                                  }
+                                ],
+                                "usr": "s:Sq"
+                              }
+                            ]
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                ]
+              },
+              {
+                "kind": "TypeFunc",
+                "name": "Function",
+                "printedName": "(PayKit.PYKPayResult) -> ()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "PYKPayResult",
+                    "printedName": "PayKit.PYKPayResult",
+                    "usr": "c:@M@PayKit@objc(cs)PYKPayResult"
+                  }
+                ]
+              }
+            ],
+            "declKind": "Func",
+            "usr": "c:@CM@PayKit@objc(cs)PYKPayKit(cm)presentPaymentSheetFromViewController:configuration:requestProvider:completion:",
+            "mangledName": "$s6PayKit06PYKPayB0C19presentPaymentSheet4from13configuration15requestProvider10completionySo16UIViewControllerC_AA010PYKPaymentF13ConfigurationCyAA0C7ChannelO_yAA0C7RequestCSg_s5Error_pSgtctcyAA0C6ResultCctFZ",
+            "moduleName": "PayKit",
+            "static": true,
+            "objc_name": "presentPaymentSheetFromViewController:configuration:requestProvider:completion:",
+            "declAttributes": [
+              "Final",
+              "AccessControl",
+              "ObjC",
+              "RawDocComment"
+            ],
+            "isFromExtension": true,
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "presentPaymentSheet",
+            "printedName": "presentPaymentSheet(from:configuration:requestProvider:completion:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "UIViewController",
+                "printedName": "UIKit.UIViewController",
+                "usr": "c:objc(cs)UIViewController"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "PYKPaymentSheetConfiguration",
+                "printedName": "PayKit.PYKPaymentSheetConfiguration",
+                "hasDefaultArg": true,
+                "usr": "c:@M@PayKit@objc(cs)PYKPaymentSheetConfiguration"
+              },
+              {
+                "kind": "TypeFunc",
+                "name": "Function",
+                "printedName": "(PayKit.PYKPayChannel, @escaping (Swift.Result<PayKit.PYKPayRequest, any Swift.Error>) -> ()) -> ()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Tuple",
+                    "printedName": "(PayKit.PYKPayChannel, (Swift.Result<PayKit.PYKPayRequest, any Swift.Error>) -> ())",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "PYKPayChannel",
+                        "printedName": "PayKit.PYKPayChannel",
+                        "usr": "c:@M@PayKit@E@PYKPayChannel"
+                      },
+                      {
+                        "kind": "TypeFunc",
+                        "name": "Function",
+                        "printedName": "(Swift.Result<PayKit.PYKPayRequest, any Swift.Error>) -> ()",
+                        "children": [
+                          {
+                            "kind": "TypeNominal",
+                            "name": "Void",
+                            "printedName": "()"
+                          },
+                          {
+                            "kind": "TypeNominal",
+                            "name": "Result",
+                            "printedName": "Swift.Result<PayKit.PYKPayRequest, any Swift.Error>",
+                            "children": [
+                              {
+                                "kind": "TypeNominal",
+                                "name": "PYKPayRequest",
+                                "printedName": "PayKit.PYKPayRequest",
+                                "usr": "c:@M@PayKit@objc(cs)PYKPayRequest"
+                              },
+                              {
+                                "kind": "TypeNominal",
+                                "name": "Error",
+                                "printedName": "any Swift.Error",
+                                "usr": "s:s5ErrorP"
+                              }
+                            ],
+                            "usr": "s:s6ResultO"
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                ]
+              },
+              {
+                "kind": "TypeFunc",
+                "name": "Function",
+                "printedName": "(PayKit.PYKPayResult) -> ()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "PYKPayResult",
+                    "printedName": "PayKit.PYKPayResult",
+                    "usr": "c:@M@PayKit@objc(cs)PYKPayResult"
+                  }
+                ]
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:6PayKit06PYKPayB0C19presentPaymentSheet4from13configuration15requestProvider10completionySo16UIViewControllerC_AA010PYKPaymentF13ConfigurationCyAA0C7ChannelO_ys6ResultOyAA0C7RequestCs5Error_pGctcyAA0cQ0CctFZ",
+            "mangledName": "$s6PayKit06PYKPayB0C19presentPaymentSheet4from13configuration15requestProvider10completionySo16UIViewControllerC_AA010PYKPaymentF13ConfigurationCyAA0C7ChannelO_ys6ResultOyAA0C7RequestCs5Error_pGctcyAA0cQ0CctFZ",
+            "moduleName": "PayKit",
+            "static": true,
+            "declAttributes": [
+              "Final",
+              "RawDocComment"
+            ],
+            "isFromExtension": true,
+            "funcSelfKind": "NonMutating"
+          }
+        ],
+        "declKind": "Class",
+        "usr": "c:@M@PayKit@objc(cs)PYKPayKit",
+        "mangledName": "$s6PayKit06PYKPayB0C",
+        "moduleName": "PayKit",
+        "objc_name": "PYKPayKit",
+        "declAttributes": [
+          "Final",
+          "AccessControl",
+          "ObjC",
+          "ObjCMembers"
+        ],
+        "superclassUsr": "c:objc(cs)NSObject",
+        "inheritsConvenienceInitializers": true,
+        "superclassNames": [
+          "ObjectiveC.NSObject"
+        ],
+        "conformances": [
+          {
+            "kind": "Conformance",
+            "name": "_KeyValueCodingAndObserving",
+            "printedName": "_KeyValueCodingAndObserving",
+            "usr": "s:10Foundation27_KeyValueCodingAndObservingP",
+            "mangledName": "$s10Foundation27_KeyValueCodingAndObservingP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "_KeyValueCodingAndObservingPublishing",
+            "printedName": "_KeyValueCodingAndObservingPublishing",
+            "usr": "s:10Foundation37_KeyValueCodingAndObservingPublishingP",
+            "mangledName": "$s10Foundation37_KeyValueCodingAndObservingPublishingP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "CVarArg",
+            "printedName": "CVarArg",
+            "usr": "s:s7CVarArgP",
+            "mangledName": "$ss7CVarArgP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Copyable",
+            "printedName": "Copyable",
+            "usr": "s:s8CopyableP",
+            "mangledName": "$ss8CopyableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "CustomDebugStringConvertible",
+            "printedName": "CustomDebugStringConvertible",
+            "usr": "s:s28CustomDebugStringConvertibleP",
+            "mangledName": "$ss28CustomDebugStringConvertibleP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "CustomStringConvertible",
+            "printedName": "CustomStringConvertible",
+            "usr": "s:s23CustomStringConvertibleP",
+            "mangledName": "$ss23CustomStringConvertibleP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Equatable",
+            "printedName": "Equatable",
+            "usr": "s:SQ",
+            "mangledName": "$sSQ"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Escapable",
+            "printedName": "Escapable",
+            "usr": "s:s9EscapableP",
+            "mangledName": "$ss9EscapableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Hashable",
+            "printedName": "Hashable",
+            "usr": "s:SH",
+            "mangledName": "$sSH"
+          }
+        ]
+      },
+      {
+        "kind": "Import",
+        "name": "Foundation",
+        "printedName": "Foundation",
+        "declKind": "Import",
+        "moduleName": "PayKit"
+      },
+      {
+        "kind": "TypeDecl",
+        "name": "PYKPayRequest",
+        "printedName": "PYKPayRequest",
+        "children": [
+          {
+            "kind": "Var",
+            "name": "channel",
+            "printedName": "channel",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "PYKPayChannel",
+                "printedName": "PayKit.PYKPayChannel",
+                "usr": "c:@M@PayKit@E@PYKPayChannel"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "c:@M@PayKit@objc(cs)PYKPayRequest(py)channel",
+            "mangledName": "$s6PayKit13PYKPayRequestC7channelAA0C7ChannelOvp",
+            "moduleName": "PayKit",
+            "declAttributes": [
+              "Final",
+              "HasStorage",
+              "AccessControl",
+              "ObjC"
+            ],
+            "isLet": true,
+            "hasStorage": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "PYKPayChannel",
+                    "printedName": "PayKit.PYKPayChannel",
+                    "usr": "c:@M@PayKit@E@PYKPayChannel"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "c:@M@PayKit@objc(cs)PYKPayRequest(im)channel",
+                "mangledName": "$s6PayKit13PYKPayRequestC7channelAA0C7ChannelOvg",
+                "moduleName": "PayKit",
+                "implicit": true,
+                "declAttributes": [
+                  "Final",
+                  "ObjC"
+                ],
+                "accessorKind": "get"
+              }
+            ]
+          },
+          {
+            "kind": "Constructor",
+            "name": "init",
+            "printedName": "init(channel:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "PYKPayRequest",
+                "printedName": "PayKit.PYKPayRequest",
+                "usr": "c:@M@PayKit@objc(cs)PYKPayRequest"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "PYKPayChannel",
+                "printedName": "PayKit.PYKPayChannel",
+                "usr": "c:@M@PayKit@E@PYKPayChannel"
+              }
+            ],
+            "declKind": "Constructor",
+            "usr": "c:@M@PayKit@objc(cs)PYKPayRequest(im)initWithChannel:",
+            "mangledName": "$s6PayKit13PYKPayRequestC7channelAcA0C7ChannelO_tcfc",
+            "moduleName": "PayKit",
+            "declAttributes": [
+              "AccessControl",
+              "ObjC"
+            ],
+            "init_kind": "Designated"
+          },
+          {
+            "kind": "Constructor",
+            "name": "init",
+            "printedName": "init()",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "PYKPayRequest",
+                "printedName": "PayKit.PYKPayRequest",
+                "usr": "c:@M@PayKit@objc(cs)PYKPayRequest"
+              }
+            ],
+            "declKind": "Constructor",
+            "usr": "c:@M@PayKit@objc(cs)PYKPayRequest(im)init",
+            "mangledName": "$s6PayKit13PYKPayRequestCACycfc",
+            "moduleName": "PayKit",
+            "overriding": true,
+            "implicit": true,
+            "objc_name": "init",
+            "declAttributes": [
+              "Dynamic",
+              "ObjC",
+              "Override"
+            ],
+            "init_kind": "Designated"
+          }
+        ],
+        "declKind": "Class",
+        "usr": "c:@M@PayKit@objc(cs)PYKPayRequest",
+        "mangledName": "$s6PayKit13PYKPayRequestC",
+        "moduleName": "PayKit",
+        "isOpen": true,
+        "objc_name": "PYKPayRequest",
+        "declAttributes": [
+          "AccessControl",
+          "ObjC",
+          "ObjCMembers"
+        ],
+        "superclassUsr": "c:objc(cs)NSObject",
+        "superclassNames": [
+          "ObjectiveC.NSObject"
+        ],
+        "conformances": [
+          {
+            "kind": "Conformance",
+            "name": "_KeyValueCodingAndObserving",
+            "printedName": "_KeyValueCodingAndObserving",
+            "usr": "s:10Foundation27_KeyValueCodingAndObservingP",
+            "mangledName": "$s10Foundation27_KeyValueCodingAndObservingP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "_KeyValueCodingAndObservingPublishing",
+            "printedName": "_KeyValueCodingAndObservingPublishing",
+            "usr": "s:10Foundation37_KeyValueCodingAndObservingPublishingP",
+            "mangledName": "$s10Foundation37_KeyValueCodingAndObservingPublishingP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "CVarArg",
+            "printedName": "CVarArg",
+            "usr": "s:s7CVarArgP",
+            "mangledName": "$ss7CVarArgP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Copyable",
+            "printedName": "Copyable",
+            "usr": "s:s8CopyableP",
+            "mangledName": "$ss8CopyableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "CustomDebugStringConvertible",
+            "printedName": "CustomDebugStringConvertible",
+            "usr": "s:s28CustomDebugStringConvertibleP",
+            "mangledName": "$ss28CustomDebugStringConvertibleP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "CustomStringConvertible",
+            "printedName": "CustomStringConvertible",
+            "usr": "s:s23CustomStringConvertibleP",
+            "mangledName": "$ss23CustomStringConvertibleP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Equatable",
+            "printedName": "Equatable",
+            "usr": "s:SQ",
+            "mangledName": "$sSQ"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Escapable",
+            "printedName": "Escapable",
+            "usr": "s:s9EscapableP",
+            "mangledName": "$ss9EscapableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Hashable",
+            "printedName": "Hashable",
+            "usr": "s:SH",
+            "mangledName": "$sSH"
+          }
+        ]
+      },
+      {
+        "kind": "Import",
+        "name": "Foundation",
+        "printedName": "Foundation",
+        "declKind": "Import",
+        "moduleName": "PayKit"
+      },
+      {
+        "kind": "TypeDecl",
+        "name": "PYKPayResult",
+        "printedName": "PYKPayResult",
+        "children": [
+          {
+            "kind": "Var",
+            "name": "status",
+            "printedName": "status",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "PYKPayStatus",
+                "printedName": "PayKit.PYKPayStatus",
+                "usr": "c:@M@PayKit@E@PYKPayStatus"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "c:@M@PayKit@objc(cs)PYKPayResult(py)status",
+            "mangledName": "$s6PayKit12PYKPayResultC6statusAA0C6StatusOvp",
+            "moduleName": "PayKit",
+            "declAttributes": [
+              "Final",
+              "HasStorage",
+              "AccessControl",
+              "ObjC"
+            ],
+            "isLet": true,
+            "hasStorage": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "PYKPayStatus",
+                    "printedName": "PayKit.PYKPayStatus",
+                    "usr": "c:@M@PayKit@E@PYKPayStatus"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "c:@M@PayKit@objc(cs)PYKPayResult(im)status",
+                "mangledName": "$s6PayKit12PYKPayResultC6statusAA0C6StatusOvg",
+                "moduleName": "PayKit",
+                "implicit": true,
+                "declAttributes": [
+                  "Final",
+                  "ObjC"
+                ],
+                "accessorKind": "get"
+              }
+            ]
+          },
+          {
+            "kind": "Var",
+            "name": "channel",
+            "printedName": "channel",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "PYKPayChannel",
+                "printedName": "PayKit.PYKPayChannel",
+                "usr": "c:@M@PayKit@E@PYKPayChannel"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "c:@M@PayKit@objc(cs)PYKPayResult(py)channel",
+            "mangledName": "$s6PayKit12PYKPayResultC7channelAA0C7ChannelOvp",
+            "moduleName": "PayKit",
+            "declAttributes": [
+              "Final",
+              "HasStorage",
+              "AccessControl",
+              "ObjC"
+            ],
+            "isLet": true,
+            "hasStorage": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "PYKPayChannel",
+                    "printedName": "PayKit.PYKPayChannel",
+                    "usr": "c:@M@PayKit@E@PYKPayChannel"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "c:@M@PayKit@objc(cs)PYKPayResult(im)channel",
+                "mangledName": "$s6PayKit12PYKPayResultC7channelAA0C7ChannelOvg",
+                "moduleName": "PayKit",
+                "implicit": true,
+                "declAttributes": [
+                  "Final",
+                  "ObjC"
+                ],
+                "accessorKind": "get"
+              }
+            ]
+          },
+          {
+            "kind": "Var",
+            "name": "error",
+            "printedName": "error",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "PayKit.PYKPayError?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "PYKPayError",
+                    "printedName": "PayKit.PYKPayError",
+                    "usr": "c:@M@PayKit@objc(cs)PYKPayError"
+                  }
+                ],
+                "usr": "s:Sq"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "c:@M@PayKit@objc(cs)PYKPayResult(py)error",
+            "mangledName": "$s6PayKit12PYKPayResultC5errorAA0C5ErrorCSgvp",
+            "moduleName": "PayKit",
+            "declAttributes": [
+              "Final",
+              "HasStorage",
+              "AccessControl",
+              "ObjC"
+            ],
+            "isLet": true,
+            "hasStorage": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Optional",
+                    "printedName": "PayKit.PYKPayError?",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "PYKPayError",
+                        "printedName": "PayKit.PYKPayError",
+                        "usr": "c:@M@PayKit@objc(cs)PYKPayError"
+                      }
+                    ],
+                    "usr": "s:Sq"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "c:@M@PayKit@objc(cs)PYKPayResult(im)error",
+                "mangledName": "$s6PayKit12PYKPayResultC5errorAA0C5ErrorCSgvg",
+                "moduleName": "PayKit",
+                "implicit": true,
+                "declAttributes": [
+                  "Final",
+                  "ObjC"
+                ],
+                "accessorKind": "get"
+              }
+            ]
+          },
+          {
+            "kind": "Var",
+            "name": "rawCode",
+            "printedName": "rawCode",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "Swift.String?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "String",
+                    "printedName": "Swift.String",
+                    "usr": "s:SS"
+                  }
+                ],
+                "usr": "s:Sq"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "c:@M@PayKit@objc(cs)PYKPayResult(py)rawCode",
+            "mangledName": "$s6PayKit12PYKPayResultC7rawCodeSSSgvp",
+            "moduleName": "PayKit",
+            "declAttributes": [
+              "Final",
+              "HasStorage",
+              "AccessControl",
+              "ObjC"
+            ],
+            "isLet": true,
+            "hasStorage": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Optional",
+                    "printedName": "Swift.String?",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "String",
+                        "printedName": "Swift.String",
+                        "usr": "s:SS"
+                      }
+                    ],
+                    "usr": "s:Sq"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "c:@M@PayKit@objc(cs)PYKPayResult(im)rawCode",
+                "mangledName": "$s6PayKit12PYKPayResultC7rawCodeSSSgvg",
+                "moduleName": "PayKit",
+                "implicit": true,
+                "declAttributes": [
+                  "Final",
+                  "ObjC"
+                ],
+                "accessorKind": "get"
+              }
+            ]
+          },
+          {
+            "kind": "Var",
+            "name": "rawMessage",
+            "printedName": "rawMessage",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "Swift.String?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "String",
+                    "printedName": "Swift.String",
+                    "usr": "s:SS"
+                  }
+                ],
+                "usr": "s:Sq"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "c:@M@PayKit@objc(cs)PYKPayResult(py)rawMessage",
+            "mangledName": "$s6PayKit12PYKPayResultC10rawMessageSSSgvp",
+            "moduleName": "PayKit",
+            "declAttributes": [
+              "Final",
+              "HasStorage",
+              "AccessControl",
+              "ObjC"
+            ],
+            "isLet": true,
+            "hasStorage": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Optional",
+                    "printedName": "Swift.String?",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "String",
+                        "printedName": "Swift.String",
+                        "usr": "s:SS"
+                      }
+                    ],
+                    "usr": "s:Sq"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "c:@M@PayKit@objc(cs)PYKPayResult(im)rawMessage",
+                "mangledName": "$s6PayKit12PYKPayResultC10rawMessageSSSgvg",
+                "moduleName": "PayKit",
+                "implicit": true,
+                "declAttributes": [
+                  "Final",
+                  "ObjC"
+                ],
+                "accessorKind": "get"
+              }
+            ]
+          },
+          {
+            "kind": "Constructor",
+            "name": "init",
+            "printedName": "init(status:channel:error:rawCode:rawMessage:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "PYKPayResult",
+                "printedName": "PayKit.PYKPayResult",
+                "usr": "c:@M@PayKit@objc(cs)PYKPayResult"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "PYKPayStatus",
+                "printedName": "PayKit.PYKPayStatus",
+                "usr": "c:@M@PayKit@E@PYKPayStatus"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "PYKPayChannel",
+                "printedName": "PayKit.PYKPayChannel",
+                "usr": "c:@M@PayKit@E@PYKPayChannel"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "PayKit.PYKPayError?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "PYKPayError",
+                    "printedName": "PayKit.PYKPayError",
+                    "usr": "c:@M@PayKit@objc(cs)PYKPayError"
+                  }
+                ],
+                "hasDefaultArg": true,
+                "usr": "s:Sq"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "Swift.String?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "String",
+                    "printedName": "Swift.String",
+                    "usr": "s:SS"
+                  }
+                ],
+                "hasDefaultArg": true,
+                "usr": "s:Sq"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "Swift.String?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "String",
+                    "printedName": "Swift.String",
+                    "usr": "s:SS"
+                  }
+                ],
+                "hasDefaultArg": true,
+                "usr": "s:Sq"
+              }
+            ],
+            "declKind": "Constructor",
+            "usr": "c:@M@PayKit@objc(cs)PYKPayResult(im)initWithStatus:channel:error:rawCode:rawMessage:",
+            "mangledName": "$s6PayKit12PYKPayResultC6status7channel5error7rawCode0H7MessageAcA0C6StatusO_AA0C7ChannelOAA0C5ErrorCSgSSSgAPtcfc",
+            "moduleName": "PayKit",
+            "declAttributes": [
+              "AccessControl",
+              "ObjC"
+            ],
+            "init_kind": "Designated"
+          },
+          {
+            "kind": "Constructor",
+            "name": "init",
+            "printedName": "init()",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "PYKPayResult",
+                "printedName": "PayKit.PYKPayResult",
+                "usr": "c:@M@PayKit@objc(cs)PYKPayResult"
+              }
+            ],
+            "declKind": "Constructor",
+            "usr": "c:@M@PayKit@objc(cs)PYKPayResult(im)init",
+            "mangledName": "$s6PayKit12PYKPayResultCACycfc",
+            "moduleName": "PayKit",
+            "overriding": true,
+            "implicit": true,
+            "objc_name": "init",
+            "declAttributes": [
+              "Dynamic",
+              "ObjC",
+              "Override"
+            ],
+            "init_kind": "Designated"
+          }
+        ],
+        "declKind": "Class",
+        "usr": "c:@M@PayKit@objc(cs)PYKPayResult",
+        "mangledName": "$s6PayKit12PYKPayResultC",
+        "moduleName": "PayKit",
+        "objc_name": "PYKPayResult",
+        "declAttributes": [
+          "Final",
+          "AccessControl",
+          "ObjC",
+          "ObjCMembers"
+        ],
+        "superclassUsr": "c:objc(cs)NSObject",
+        "superclassNames": [
+          "ObjectiveC.NSObject"
+        ],
+        "conformances": [
+          {
+            "kind": "Conformance",
+            "name": "_KeyValueCodingAndObserving",
+            "printedName": "_KeyValueCodingAndObserving",
+            "usr": "s:10Foundation27_KeyValueCodingAndObservingP",
+            "mangledName": "$s10Foundation27_KeyValueCodingAndObservingP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "_KeyValueCodingAndObservingPublishing",
+            "printedName": "_KeyValueCodingAndObservingPublishing",
+            "usr": "s:10Foundation37_KeyValueCodingAndObservingPublishingP",
+            "mangledName": "$s10Foundation37_KeyValueCodingAndObservingPublishingP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "CVarArg",
+            "printedName": "CVarArg",
+            "usr": "s:s7CVarArgP",
+            "mangledName": "$ss7CVarArgP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Copyable",
+            "printedName": "Copyable",
+            "usr": "s:s8CopyableP",
+            "mangledName": "$ss8CopyableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "CustomDebugStringConvertible",
+            "printedName": "CustomDebugStringConvertible",
+            "usr": "s:s28CustomDebugStringConvertibleP",
+            "mangledName": "$ss28CustomDebugStringConvertibleP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "CustomStringConvertible",
+            "printedName": "CustomStringConvertible",
+            "usr": "s:s23CustomStringConvertibleP",
+            "mangledName": "$ss23CustomStringConvertibleP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Equatable",
+            "printedName": "Equatable",
+            "usr": "s:SQ",
+            "mangledName": "$sSQ"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Escapable",
+            "printedName": "Escapable",
+            "usr": "s:s9EscapableP",
+            "mangledName": "$ss9EscapableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Hashable",
+            "printedName": "Hashable",
+            "usr": "s:SH",
+            "mangledName": "$sSH"
+          }
+        ]
+      },
+      {
+        "kind": "Import",
+        "name": "Foundation",
+        "printedName": "Foundation",
+        "declKind": "Import",
+        "moduleName": "PayKit"
+      },
+      {
+        "kind": "TypeDecl",
+        "name": "PYKPayChannel",
+        "printedName": "PYKPayChannel",
+        "children": [
+          {
+            "kind": "Var",
+            "name": "unknown",
+            "printedName": "unknown",
+            "children": [
+              {
+                "kind": "TypeFunc",
+                "name": "Function",
+                "printedName": "(PayKit.PYKPayChannel.Type) -> PayKit.PYKPayChannel",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "PYKPayChannel",
+                    "printedName": "PayKit.PYKPayChannel",
+                    "usr": "c:@M@PayKit@E@PYKPayChannel"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Metatype",
+                    "printedName": "PayKit.PYKPayChannel.Type",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "PYKPayChannel",
+                        "printedName": "PayKit.PYKPayChannel",
+                        "usr": "c:@M@PayKit@E@PYKPayChannel"
+                      }
+                    ]
+                  }
+                ]
+              }
+            ],
+            "declKind": "EnumElement",
+            "usr": "c:@M@PayKit@E@PYKPayChannel@PYKPayChannelUnknown",
+            "mangledName": "$s6PayKit13PYKPayChannelO7unknownyA2CmF",
+            "moduleName": "PayKit",
+            "declAttributes": [
+              "ObjC"
+            ],
+            "fixedbinaryorder": 0
+          },
+          {
+            "kind": "Var",
+            "name": "wechat",
+            "printedName": "wechat",
+            "children": [
+              {
+                "kind": "TypeFunc",
+                "name": "Function",
+                "printedName": "(PayKit.PYKPayChannel.Type) -> PayKit.PYKPayChannel",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "PYKPayChannel",
+                    "printedName": "PayKit.PYKPayChannel",
+                    "usr": "c:@M@PayKit@E@PYKPayChannel"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Metatype",
+                    "printedName": "PayKit.PYKPayChannel.Type",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "PYKPayChannel",
+                        "printedName": "PayKit.PYKPayChannel",
+                        "usr": "c:@M@PayKit@E@PYKPayChannel"
+                      }
+                    ]
+                  }
+                ]
+              }
+            ],
+            "declKind": "EnumElement",
+            "usr": "c:@M@PayKit@E@PYKPayChannel@PYKPayChannelWechat",
+            "mangledName": "$s6PayKit13PYKPayChannelO6wechatyA2CmF",
+            "moduleName": "PayKit",
+            "declAttributes": [
+              "ObjC"
+            ],
+            "fixedbinaryorder": 1
+          },
+          {
+            "kind": "Var",
+            "name": "alipay",
+            "printedName": "alipay",
+            "children": [
+              {
+                "kind": "TypeFunc",
+                "name": "Function",
+                "printedName": "(PayKit.PYKPayChannel.Type) -> PayKit.PYKPayChannel",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "PYKPayChannel",
+                    "printedName": "PayKit.PYKPayChannel",
+                    "usr": "c:@M@PayKit@E@PYKPayChannel"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Metatype",
+                    "printedName": "PayKit.PYKPayChannel.Type",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "PYKPayChannel",
+                        "printedName": "PayKit.PYKPayChannel",
+                        "usr": "c:@M@PayKit@E@PYKPayChannel"
+                      }
+                    ]
+                  }
+                ]
+              }
+            ],
+            "declKind": "EnumElement",
+            "usr": "c:@M@PayKit@E@PYKPayChannel@PYKPayChannelAlipay",
+            "mangledName": "$s6PayKit13PYKPayChannelO6alipayyA2CmF",
+            "moduleName": "PayKit",
+            "declAttributes": [
+              "ObjC"
+            ],
+            "fixedbinaryorder": 2
+          },
+          {
+            "kind": "Var",
+            "name": "mock",
+            "printedName": "mock",
+            "children": [
+              {
+                "kind": "TypeFunc",
+                "name": "Function",
+                "printedName": "(PayKit.PYKPayChannel.Type) -> PayKit.PYKPayChannel",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "PYKPayChannel",
+                    "printedName": "PayKit.PYKPayChannel",
+                    "usr": "c:@M@PayKit@E@PYKPayChannel"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Metatype",
+                    "printedName": "PayKit.PYKPayChannel.Type",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "PYKPayChannel",
+                        "printedName": "PayKit.PYKPayChannel",
+                        "usr": "c:@M@PayKit@E@PYKPayChannel"
+                      }
+                    ]
+                  }
+                ]
+              }
+            ],
+            "declKind": "EnumElement",
+            "usr": "c:@M@PayKit@E@PYKPayChannel@PYKPayChannelMock",
+            "mangledName": "$s6PayKit13PYKPayChannelO4mockyA2CmF",
+            "moduleName": "PayKit",
+            "declAttributes": [
+              "ObjC"
+            ],
+            "fixedbinaryorder": 3
+          },
+          {
+            "kind": "Constructor",
+            "name": "init",
+            "printedName": "init(rawValue:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "PayKit.PYKPayChannel?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "PYKPayChannel",
+                    "printedName": "PayKit.PYKPayChannel",
+                    "usr": "c:@M@PayKit@E@PYKPayChannel"
+                  }
+                ],
+                "usr": "s:Sq"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Int",
+                "printedName": "Swift.Int",
+                "usr": "s:Si"
+              }
+            ],
+            "declKind": "Constructor",
+            "usr": "s:6PayKit13PYKPayChannelO8rawValueACSgSi_tcfc",
+            "mangledName": "$s6PayKit13PYKPayChannelO8rawValueACSgSi_tcfc",
+            "moduleName": "PayKit",
+            "implicit": true,
+            "init_kind": "Designated"
+          },
+          {
+            "kind": "Var",
+            "name": "rawValue",
+            "printedName": "rawValue",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Int",
+                "printedName": "Swift.Int",
+                "usr": "s:Si"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:6PayKit13PYKPayChannelO8rawValueSivp",
+            "mangledName": "$s6PayKit13PYKPayChannelO8rawValueSivp",
+            "moduleName": "PayKit",
+            "implicit": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Int",
+                    "printedName": "Swift.Int",
+                    "usr": "s:Si"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:6PayKit13PYKPayChannelO8rawValueSivg",
+                "mangledName": "$s6PayKit13PYKPayChannelO8rawValueSivg",
+                "moduleName": "PayKit",
+                "implicit": true,
+                "accessorKind": "get"
+              }
+            ]
+          }
+        ],
+        "declKind": "Enum",
+        "usr": "c:@M@PayKit@E@PYKPayChannel",
+        "mangledName": "$s6PayKit13PYKPayChannelO",
+        "moduleName": "PayKit",
+        "objc_name": "PYKPayChannel",
+        "declAttributes": [
+          "AccessControl",
+          "ObjC"
+        ],
+        "enumRawTypeName": "Int",
+        "conformances": [
+          {
+            "kind": "Conformance",
+            "name": "Copyable",
+            "printedName": "Copyable",
+            "usr": "s:s8CopyableP",
+            "mangledName": "$ss8CopyableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Equatable",
+            "printedName": "Equatable",
+            "usr": "s:SQ",
+            "mangledName": "$sSQ"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Escapable",
+            "printedName": "Escapable",
+            "usr": "s:s9EscapableP",
+            "mangledName": "$ss9EscapableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Hashable",
+            "printedName": "Hashable",
+            "usr": "s:SH",
+            "mangledName": "$sSH"
+          },
+          {
+            "kind": "Conformance",
+            "name": "RawRepresentable",
+            "printedName": "RawRepresentable",
+            "children": [
+              {
+                "kind": "TypeWitness",
+                "name": "RawValue",
+                "printedName": "RawValue",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Int",
+                    "printedName": "Swift.Int",
+                    "usr": "s:Si"
+                  }
+                ]
+              }
+            ],
+            "usr": "s:SY",
+            "mangledName": "$sSY"
+          }
+        ]
+      },
+      {
+        "kind": "TypeDecl",
+        "name": "PYKPayStatus",
+        "printedName": "PYKPayStatus",
+        "children": [
+          {
+            "kind": "Var",
+            "name": "success",
+            "printedName": "success",
+            "children": [
+              {
+                "kind": "TypeFunc",
+                "name": "Function",
+                "printedName": "(PayKit.PYKPayStatus.Type) -> PayKit.PYKPayStatus",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "PYKPayStatus",
+                    "printedName": "PayKit.PYKPayStatus",
+                    "usr": "c:@M@PayKit@E@PYKPayStatus"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Metatype",
+                    "printedName": "PayKit.PYKPayStatus.Type",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "PYKPayStatus",
+                        "printedName": "PayKit.PYKPayStatus",
+                        "usr": "c:@M@PayKit@E@PYKPayStatus"
+                      }
+                    ]
+                  }
+                ]
+              }
+            ],
+            "declKind": "EnumElement",
+            "usr": "c:@M@PayKit@E@PYKPayStatus@PYKPayStatusSuccess",
+            "mangledName": "$s6PayKit12PYKPayStatusO7successyA2CmF",
+            "moduleName": "PayKit",
+            "declAttributes": [
+              "ObjC"
+            ],
+            "fixedbinaryorder": 0
+          },
+          {
+            "kind": "Var",
+            "name": "cancelled",
+            "printedName": "cancelled",
+            "children": [
+              {
+                "kind": "TypeFunc",
+                "name": "Function",
+                "printedName": "(PayKit.PYKPayStatus.Type) -> PayKit.PYKPayStatus",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "PYKPayStatus",
+                    "printedName": "PayKit.PYKPayStatus",
+                    "usr": "c:@M@PayKit@E@PYKPayStatus"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Metatype",
+                    "printedName": "PayKit.PYKPayStatus.Type",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "PYKPayStatus",
+                        "printedName": "PayKit.PYKPayStatus",
+                        "usr": "c:@M@PayKit@E@PYKPayStatus"
+                      }
+                    ]
+                  }
+                ]
+              }
+            ],
+            "declKind": "EnumElement",
+            "usr": "c:@M@PayKit@E@PYKPayStatus@PYKPayStatusCancelled",
+            "mangledName": "$s6PayKit12PYKPayStatusO9cancelledyA2CmF",
+            "moduleName": "PayKit",
+            "declAttributes": [
+              "ObjC"
+            ],
+            "fixedbinaryorder": 1
+          },
+          {
+            "kind": "Var",
+            "name": "failed",
+            "printedName": "failed",
+            "children": [
+              {
+                "kind": "TypeFunc",
+                "name": "Function",
+                "printedName": "(PayKit.PYKPayStatus.Type) -> PayKit.PYKPayStatus",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "PYKPayStatus",
+                    "printedName": "PayKit.PYKPayStatus",
+                    "usr": "c:@M@PayKit@E@PYKPayStatus"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Metatype",
+                    "printedName": "PayKit.PYKPayStatus.Type",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "PYKPayStatus",
+                        "printedName": "PayKit.PYKPayStatus",
+                        "usr": "c:@M@PayKit@E@PYKPayStatus"
+                      }
+                    ]
+                  }
+                ]
+              }
+            ],
+            "declKind": "EnumElement",
+            "usr": "c:@M@PayKit@E@PYKPayStatus@PYKPayStatusFailed",
+            "mangledName": "$s6PayKit12PYKPayStatusO6failedyA2CmF",
+            "moduleName": "PayKit",
+            "declAttributes": [
+              "ObjC"
+            ],
+            "fixedbinaryorder": 2
+          },
+          {
+            "kind": "Constructor",
+            "name": "init",
+            "printedName": "init(rawValue:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "PayKit.PYKPayStatus?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "PYKPayStatus",
+                    "printedName": "PayKit.PYKPayStatus",
+                    "usr": "c:@M@PayKit@E@PYKPayStatus"
+                  }
+                ],
+                "usr": "s:Sq"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Int",
+                "printedName": "Swift.Int",
+                "usr": "s:Si"
+              }
+            ],
+            "declKind": "Constructor",
+            "usr": "s:6PayKit12PYKPayStatusO8rawValueACSgSi_tcfc",
+            "mangledName": "$s6PayKit12PYKPayStatusO8rawValueACSgSi_tcfc",
+            "moduleName": "PayKit",
+            "implicit": true,
+            "init_kind": "Designated"
+          },
+          {
+            "kind": "Var",
+            "name": "rawValue",
+            "printedName": "rawValue",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Int",
+                "printedName": "Swift.Int",
+                "usr": "s:Si"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:6PayKit12PYKPayStatusO8rawValueSivp",
+            "mangledName": "$s6PayKit12PYKPayStatusO8rawValueSivp",
+            "moduleName": "PayKit",
+            "implicit": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Int",
+                    "printedName": "Swift.Int",
+                    "usr": "s:Si"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:6PayKit12PYKPayStatusO8rawValueSivg",
+                "mangledName": "$s6PayKit12PYKPayStatusO8rawValueSivg",
+                "moduleName": "PayKit",
+                "implicit": true,
+                "accessorKind": "get"
+              }
+            ]
+          }
+        ],
+        "declKind": "Enum",
+        "usr": "c:@M@PayKit@E@PYKPayStatus",
+        "mangledName": "$s6PayKit12PYKPayStatusO",
+        "moduleName": "PayKit",
+        "objc_name": "PYKPayStatus",
+        "declAttributes": [
+          "AccessControl",
+          "ObjC"
+        ],
+        "enumRawTypeName": "Int",
+        "conformances": [
+          {
+            "kind": "Conformance",
+            "name": "Copyable",
+            "printedName": "Copyable",
+            "usr": "s:s8CopyableP",
+            "mangledName": "$ss8CopyableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Equatable",
+            "printedName": "Equatable",
+            "usr": "s:SQ",
+            "mangledName": "$sSQ"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Escapable",
+            "printedName": "Escapable",
+            "usr": "s:s9EscapableP",
+            "mangledName": "$ss9EscapableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Hashable",
+            "printedName": "Hashable",
+            "usr": "s:SH",
+            "mangledName": "$sSH"
+          },
+          {
+            "kind": "Conformance",
+            "name": "RawRepresentable",
+            "printedName": "RawRepresentable",
+            "children": [
+              {
+                "kind": "TypeWitness",
+                "name": "RawValue",
+                "printedName": "RawValue",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Int",
+                    "printedName": "Swift.Int",
+                    "usr": "s:Si"
+                  }
+                ]
+              }
+            ],
+            "usr": "s:SY",
+            "mangledName": "$sSY"
+          }
+        ]
+      },
+      {
+        "kind": "Import",
+        "name": "Foundation",
+        "printedName": "Foundation",
+        "declKind": "Import",
+        "moduleName": "PayKit"
+      },
+      {
+        "kind": "TypeDecl",
+        "name": "PYKPaymentOption",
+        "printedName": "PYKPaymentOption",
+        "children": [
+          {
+            "kind": "Var",
+            "name": "channel",
+            "printedName": "channel",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "PYKPayChannel",
+                "printedName": "PayKit.PYKPayChannel",
+                "usr": "c:@M@PayKit@E@PYKPayChannel"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "c:@M@PayKit@objc(cs)PYKPaymentOption(py)channel",
+            "mangledName": "$s6PayKit16PYKPaymentOptionC7channelAA13PYKPayChannelOvp",
+            "moduleName": "PayKit",
+            "declAttributes": [
+              "Final",
+              "HasStorage",
+              "AccessControl",
+              "ObjC"
+            ],
+            "isLet": true,
+            "hasStorage": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "PYKPayChannel",
+                    "printedName": "PayKit.PYKPayChannel",
+                    "usr": "c:@M@PayKit@E@PYKPayChannel"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "c:@M@PayKit@objc(cs)PYKPaymentOption(im)channel",
+                "mangledName": "$s6PayKit16PYKPaymentOptionC7channelAA13PYKPayChannelOvg",
+                "moduleName": "PayKit",
+                "implicit": true,
+                "declAttributes": [
+                  "Final",
+                  "ObjC"
+                ],
+                "accessorKind": "get"
+              }
+            ]
+          },
+          {
+            "kind": "Var",
+            "name": "title",
+            "printedName": "title",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "String",
+                "printedName": "Swift.String",
+                "usr": "s:SS"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "c:@M@PayKit@objc(cs)PYKPaymentOption(py)title",
+            "mangledName": "$s6PayKit16PYKPaymentOptionC5titleSSvp",
+            "moduleName": "PayKit",
+            "declAttributes": [
+              "Final",
+              "HasStorage",
+              "AccessControl",
+              "ObjC"
+            ],
+            "isLet": true,
+            "hasStorage": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "String",
+                    "printedName": "Swift.String",
+                    "usr": "s:SS"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "c:@M@PayKit@objc(cs)PYKPaymentOption(im)title",
+                "mangledName": "$s6PayKit16PYKPaymentOptionC5titleSSvg",
+                "moduleName": "PayKit",
+                "implicit": true,
+                "declAttributes": [
+                  "Final",
+                  "ObjC"
+                ],
+                "accessorKind": "get"
+              }
+            ]
+          },
+          {
+            "kind": "Var",
+            "name": "subtitle",
+            "printedName": "subtitle",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "Swift.String?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "String",
+                    "printedName": "Swift.String",
+                    "usr": "s:SS"
+                  }
+                ],
+                "usr": "s:Sq"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "c:@M@PayKit@objc(cs)PYKPaymentOption(py)subtitle",
+            "mangledName": "$s6PayKit16PYKPaymentOptionC8subtitleSSSgvp",
+            "moduleName": "PayKit",
+            "declAttributes": [
+              "Final",
+              "HasStorage",
+              "AccessControl",
+              "ObjC"
+            ],
+            "isLet": true,
+            "hasStorage": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Optional",
+                    "printedName": "Swift.String?",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "String",
+                        "printedName": "Swift.String",
+                        "usr": "s:SS"
+                      }
+                    ],
+                    "usr": "s:Sq"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "c:@M@PayKit@objc(cs)PYKPaymentOption(im)subtitle",
+                "mangledName": "$s6PayKit16PYKPaymentOptionC8subtitleSSSgvg",
+                "moduleName": "PayKit",
+                "implicit": true,
+                "declAttributes": [
+                  "Final",
+                  "ObjC"
+                ],
+                "accessorKind": "get"
+              }
+            ]
+          },
+          {
+            "kind": "Var",
+            "name": "isEnabled",
+            "printedName": "isEnabled",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Bool",
+                "printedName": "Swift.Bool",
+                "usr": "s:Sb"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "c:@M@PayKit@objc(cs)PYKPaymentOption(py)isEnabled",
+            "mangledName": "$s6PayKit16PYKPaymentOptionC9isEnabledSbvp",
+            "moduleName": "PayKit",
+            "declAttributes": [
+              "Final",
+              "HasStorage",
+              "AccessControl",
+              "ObjC"
+            ],
+            "isLet": true,
+            "hasStorage": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Bool",
+                    "printedName": "Swift.Bool",
+                    "usr": "s:Sb"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "c:@M@PayKit@objc(cs)PYKPaymentOption(im)isEnabled",
+                "mangledName": "$s6PayKit16PYKPaymentOptionC9isEnabledSbvg",
+                "moduleName": "PayKit",
+                "implicit": true,
+                "declAttributes": [
+                  "Final",
+                  "ObjC"
+                ],
+                "accessorKind": "get"
+              }
+            ]
+          },
+          {
+            "kind": "Constructor",
+            "name": "init",
+            "printedName": "init(channel:title:subtitle:isEnabled:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "PYKPaymentOption",
+                "printedName": "PayKit.PYKPaymentOption",
+                "usr": "c:@M@PayKit@objc(cs)PYKPaymentOption"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "PYKPayChannel",
+                "printedName": "PayKit.PYKPayChannel",
+                "usr": "c:@M@PayKit@E@PYKPayChannel"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "String",
+                "printedName": "Swift.String",
+                "usr": "s:SS"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "Swift.String?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "String",
+                    "printedName": "Swift.String",
+                    "usr": "s:SS"
+                  }
+                ],
+                "hasDefaultArg": true,
+                "usr": "s:Sq"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Bool",
+                "printedName": "Swift.Bool",
+                "hasDefaultArg": true,
+                "usr": "s:Sb"
+              }
+            ],
+            "declKind": "Constructor",
+            "usr": "c:@M@PayKit@objc(cs)PYKPaymentOption(im)initWithChannel:title:subtitle:isEnabled:",
+            "mangledName": "$s6PayKit16PYKPaymentOptionC7channel5title8subtitle9isEnabledAcA13PYKPayChannelO_S2SSgSbtcfc",
+            "moduleName": "PayKit",
+            "declAttributes": [
+              "AccessControl",
+              "ObjC"
+            ],
+            "init_kind": "Designated"
+          },
+          {
+            "kind": "Function",
+            "name": "wechat",
+            "printedName": "wechat(subtitle:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "PYKPaymentOption",
+                "printedName": "PayKit.PYKPaymentOption",
+                "usr": "c:@M@PayKit@objc(cs)PYKPaymentOption"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "Swift.String?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "String",
+                    "printedName": "Swift.String",
+                    "usr": "s:SS"
+                  }
+                ],
+                "hasDefaultArg": true,
+                "usr": "s:Sq"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "c:@M@PayKit@objc(cs)PYKPaymentOption(cm)wechatWithSubtitle:",
+            "mangledName": "$s6PayKit16PYKPaymentOptionC6wechat8subtitleACSSSg_tFZ",
+            "moduleName": "PayKit",
+            "static": true,
+            "declAttributes": [
+              "Final",
+              "AccessControl",
+              "ObjC"
+            ],
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "alipay",
+            "printedName": "alipay(subtitle:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "PYKPaymentOption",
+                "printedName": "PayKit.PYKPaymentOption",
+                "usr": "c:@M@PayKit@objc(cs)PYKPaymentOption"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "Swift.String?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "String",
+                    "printedName": "Swift.String",
+                    "usr": "s:SS"
+                  }
+                ],
+                "hasDefaultArg": true,
+                "usr": "s:Sq"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "c:@M@PayKit@objc(cs)PYKPaymentOption(cm)alipayWithSubtitle:",
+            "mangledName": "$s6PayKit16PYKPaymentOptionC6alipay8subtitleACSSSg_tFZ",
+            "moduleName": "PayKit",
+            "static": true,
+            "declAttributes": [
+              "Final",
+              "AccessControl",
+              "ObjC"
+            ],
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Constructor",
+            "name": "init",
+            "printedName": "init()",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "PYKPaymentOption",
+                "printedName": "PayKit.PYKPaymentOption",
+                "usr": "c:@M@PayKit@objc(cs)PYKPaymentOption"
+              }
+            ],
+            "declKind": "Constructor",
+            "usr": "c:@M@PayKit@objc(cs)PYKPaymentOption(im)init",
+            "mangledName": "$s6PayKit16PYKPaymentOptionCACycfc",
+            "moduleName": "PayKit",
+            "overriding": true,
+            "implicit": true,
+            "objc_name": "init",
+            "declAttributes": [
+              "Dynamic",
+              "ObjC",
+              "Override"
+            ],
+            "init_kind": "Designated"
+          }
+        ],
+        "declKind": "Class",
+        "usr": "c:@M@PayKit@objc(cs)PYKPaymentOption",
+        "mangledName": "$s6PayKit16PYKPaymentOptionC",
+        "moduleName": "PayKit",
+        "objc_name": "PYKPaymentOption",
+        "declAttributes": [
+          "Final",
+          "AccessControl",
+          "ObjC",
+          "ObjCMembers",
+          "RawDocComment"
+        ],
+        "superclassUsr": "c:objc(cs)NSObject",
+        "superclassNames": [
+          "ObjectiveC.NSObject"
+        ],
+        "conformances": [
+          {
+            "kind": "Conformance",
+            "name": "_KeyValueCodingAndObserving",
+            "printedName": "_KeyValueCodingAndObserving",
+            "usr": "s:10Foundation27_KeyValueCodingAndObservingP",
+            "mangledName": "$s10Foundation27_KeyValueCodingAndObservingP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "_KeyValueCodingAndObservingPublishing",
+            "printedName": "_KeyValueCodingAndObservingPublishing",
+            "usr": "s:10Foundation37_KeyValueCodingAndObservingPublishingP",
+            "mangledName": "$s10Foundation37_KeyValueCodingAndObservingPublishingP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "CVarArg",
+            "printedName": "CVarArg",
+            "usr": "s:s7CVarArgP",
+            "mangledName": "$ss7CVarArgP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Copyable",
+            "printedName": "Copyable",
+            "usr": "s:s8CopyableP",
+            "mangledName": "$ss8CopyableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "CustomDebugStringConvertible",
+            "printedName": "CustomDebugStringConvertible",
+            "usr": "s:s28CustomDebugStringConvertibleP",
+            "mangledName": "$ss28CustomDebugStringConvertibleP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "CustomStringConvertible",
+            "printedName": "CustomStringConvertible",
+            "usr": "s:s23CustomStringConvertibleP",
+            "mangledName": "$ss23CustomStringConvertibleP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Equatable",
+            "printedName": "Equatable",
+            "usr": "s:SQ",
+            "mangledName": "$sSQ"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Escapable",
+            "printedName": "Escapable",
+            "usr": "s:s9EscapableP",
+            "mangledName": "$ss9EscapableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Hashable",
+            "printedName": "Hashable",
+            "usr": "s:SH",
+            "mangledName": "$sSH"
+          }
+        ]
+      },
+      {
+        "kind": "TypeDecl",
+        "name": "PYKPaymentSheetConfiguration",
+        "printedName": "PYKPaymentSheetConfiguration",
+        "children": [
+          {
+            "kind": "Var",
+            "name": "title",
+            "printedName": "title",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "String",
+                "printedName": "Swift.String",
+                "usr": "s:SS"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "c:@M@PayKit@objc(cs)PYKPaymentSheetConfiguration(py)title",
+            "mangledName": "$s6PayKit28PYKPaymentSheetConfigurationC5titleSSvp",
+            "moduleName": "PayKit",
+            "declAttributes": [
+              "Final",
+              "HasStorage",
+              "AccessControl",
+              "ObjC"
+            ],
+            "isLet": true,
+            "hasStorage": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "String",
+                    "printedName": "Swift.String",
+                    "usr": "s:SS"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "c:@M@PayKit@objc(cs)PYKPaymentSheetConfiguration(im)title",
+                "mangledName": "$s6PayKit28PYKPaymentSheetConfigurationC5titleSSvg",
+                "moduleName": "PayKit",
+                "implicit": true,
+                "declAttributes": [
+                  "Final",
+                  "ObjC"
+                ],
+                "accessorKind": "get"
+              }
+            ]
+          },
+          {
+            "kind": "Var",
+            "name": "amountText",
+            "printedName": "amountText",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "Swift.String?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "String",
+                    "printedName": "Swift.String",
+                    "usr": "s:SS"
+                  }
+                ],
+                "usr": "s:Sq"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "c:@M@PayKit@objc(cs)PYKPaymentSheetConfiguration(py)amountText",
+            "mangledName": "$s6PayKit28PYKPaymentSheetConfigurationC10amountTextSSSgvp",
+            "moduleName": "PayKit",
+            "declAttributes": [
+              "Final",
+              "HasStorage",
+              "AccessControl",
+              "RawDocComment",
+              "ObjC"
+            ],
+            "isLet": true,
+            "hasStorage": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Optional",
+                    "printedName": "Swift.String?",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "String",
+                        "printedName": "Swift.String",
+                        "usr": "s:SS"
+                      }
+                    ],
+                    "usr": "s:Sq"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "c:@M@PayKit@objc(cs)PYKPaymentSheetConfiguration(im)amountText",
+                "mangledName": "$s6PayKit28PYKPaymentSheetConfigurationC10amountTextSSSgvg",
+                "moduleName": "PayKit",
+                "implicit": true,
+                "declAttributes": [
+                  "Final",
+                  "ObjC"
+                ],
+                "accessorKind": "get"
+              }
+            ]
+          },
+          {
+            "kind": "Var",
+            "name": "options",
+            "printedName": "options",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Array",
+                "printedName": "[PayKit.PYKPaymentOption]",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "PYKPaymentOption",
+                    "printedName": "PayKit.PYKPaymentOption",
+                    "usr": "c:@M@PayKit@objc(cs)PYKPaymentOption"
+                  }
+                ],
+                "usr": "s:Sa"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "c:@M@PayKit@objc(cs)PYKPaymentSheetConfiguration(py)options",
+            "mangledName": "$s6PayKit28PYKPaymentSheetConfigurationC7optionsSayAA0C6OptionCGvp",
+            "moduleName": "PayKit",
+            "declAttributes": [
+              "Final",
+              "HasStorage",
+              "AccessControl",
+              "ObjC"
+            ],
+            "isLet": true,
+            "hasStorage": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Array",
+                    "printedName": "[PayKit.PYKPaymentOption]",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "PYKPaymentOption",
+                        "printedName": "PayKit.PYKPaymentOption",
+                        "usr": "c:@M@PayKit@objc(cs)PYKPaymentOption"
+                      }
+                    ],
+                    "usr": "s:Sa"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "c:@M@PayKit@objc(cs)PYKPaymentSheetConfiguration(im)options",
+                "mangledName": "$s6PayKit28PYKPaymentSheetConfigurationC7optionsSayAA0C6OptionCGvg",
+                "moduleName": "PayKit",
+                "implicit": true,
+                "declAttributes": [
+                  "Final",
+                  "ObjC"
+                ],
+                "accessorKind": "get"
+              }
+            ]
+          },
+          {
+            "kind": "Var",
+            "name": "confirmTitle",
+            "printedName": "confirmTitle",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "String",
+                "printedName": "Swift.String",
+                "usr": "s:SS"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "c:@M@PayKit@objc(cs)PYKPaymentSheetConfiguration(py)confirmTitle",
+            "mangledName": "$s6PayKit28PYKPaymentSheetConfigurationC12confirmTitleSSvp",
+            "moduleName": "PayKit",
+            "declAttributes": [
+              "Final",
+              "HasStorage",
+              "AccessControl",
+              "ObjC"
+            ],
+            "isLet": true,
+            "hasStorage": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "String",
+                    "printedName": "Swift.String",
+                    "usr": "s:SS"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "c:@M@PayKit@objc(cs)PYKPaymentSheetConfiguration(im)confirmTitle",
+                "mangledName": "$s6PayKit28PYKPaymentSheetConfigurationC12confirmTitleSSvg",
+                "moduleName": "PayKit",
+                "implicit": true,
+                "declAttributes": [
+                  "Final",
+                  "ObjC"
+                ],
+                "accessorKind": "get"
+              }
+            ]
+          },
+          {
+            "kind": "Var",
+            "name": "footnote",
+            "printedName": "footnote",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "Swift.String?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "String",
+                    "printedName": "Swift.String",
+                    "usr": "s:SS"
+                  }
+                ],
+                "usr": "s:Sq"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "c:@M@PayKit@objc(cs)PYKPaymentSheetConfiguration(py)footnote",
+            "mangledName": "$s6PayKit28PYKPaymentSheetConfigurationC8footnoteSSSgvp",
+            "moduleName": "PayKit",
+            "declAttributes": [
+              "Final",
+              "HasStorage",
+              "AccessControl",
+              "ObjC"
+            ],
+            "isLet": true,
+            "hasStorage": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Optional",
+                    "printedName": "Swift.String?",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "String",
+                        "printedName": "Swift.String",
+                        "usr": "s:SS"
+                      }
+                    ],
+                    "usr": "s:Sq"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "c:@M@PayKit@objc(cs)PYKPaymentSheetConfiguration(im)footnote",
+                "mangledName": "$s6PayKit28PYKPaymentSheetConfigurationC8footnoteSSSgvg",
+                "moduleName": "PayKit",
+                "implicit": true,
+                "declAttributes": [
+                  "Final",
+                  "ObjC"
+                ],
+                "accessorKind": "get"
+              }
+            ]
+          },
+          {
+            "kind": "Constructor",
+            "name": "init",
+            "printedName": "init(title:amountText:options:confirmTitle:footnote:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "PYKPaymentSheetConfiguration",
+                "printedName": "PayKit.PYKPaymentSheetConfiguration",
+                "usr": "c:@M@PayKit@objc(cs)PYKPaymentSheetConfiguration"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "String",
+                "printedName": "Swift.String",
+                "usr": "s:SS"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "Swift.String?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "String",
+                    "printedName": "Swift.String",
+                    "usr": "s:SS"
+                  }
+                ],
+                "usr": "s:Sq"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Array",
+                "printedName": "[PayKit.PYKPaymentOption]",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "PYKPaymentOption",
+                    "printedName": "PayKit.PYKPaymentOption",
+                    "usr": "c:@M@PayKit@objc(cs)PYKPaymentOption"
+                  }
+                ],
+                "usr": "s:Sa"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "String",
+                "printedName": "Swift.String",
+                "usr": "s:SS"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "Swift.String?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "String",
+                    "printedName": "Swift.String",
+                    "usr": "s:SS"
+                  }
+                ],
+                "usr": "s:Sq"
+              }
+            ],
+            "declKind": "Constructor",
+            "usr": "c:@M@PayKit@objc(cs)PYKPaymentSheetConfiguration(im)initWithTitle:amountText:options:confirmTitle:footnote:",
+            "mangledName": "$s6PayKit28PYKPaymentSheetConfigurationC5title10amountText7options12confirmTitle8footnoteACSS_SSSgSayAA0C6OptionCGSSAItcfc",
+            "moduleName": "PayKit",
+            "declAttributes": [
+              "AccessControl",
+              "ObjC"
+            ],
+            "init_kind": "Designated"
+          },
+          {
+            "kind": "Function",
+            "name": "standard",
+            "printedName": "standard(amountText:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "PYKPaymentSheetConfiguration",
+                "printedName": "PayKit.PYKPaymentSheetConfiguration",
+                "usr": "c:@M@PayKit@objc(cs)PYKPaymentSheetConfiguration"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "Swift.String?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "String",
+                    "printedName": "Swift.String",
+                    "usr": "s:SS"
+                  }
+                ],
+                "hasDefaultArg": true,
+                "usr": "s:Sq"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "c:@M@PayKit@objc(cs)PYKPaymentSheetConfiguration(cm)standardConfigurationWithAmountText:",
+            "mangledName": "$s6PayKit28PYKPaymentSheetConfigurationC8standard10amountTextACSSSg_tFZ",
+            "moduleName": "PayKit",
+            "static": true,
+            "objc_name": "standardConfigurationWithAmountText:",
+            "declAttributes": [
+              "Final",
+              "AccessControl",
+              "ObjC",
+              "RawDocComment"
+            ],
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Constructor",
+            "name": "init",
+            "printedName": "init()",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "PYKPaymentSheetConfiguration",
+                "printedName": "PayKit.PYKPaymentSheetConfiguration",
+                "usr": "c:@M@PayKit@objc(cs)PYKPaymentSheetConfiguration"
+              }
+            ],
+            "declKind": "Constructor",
+            "usr": "c:@M@PayKit@objc(cs)PYKPaymentSheetConfiguration(im)init",
+            "mangledName": "$s6PayKit28PYKPaymentSheetConfigurationCACycfc",
+            "moduleName": "PayKit",
+            "overriding": true,
+            "implicit": true,
+            "objc_name": "init",
+            "declAttributes": [
+              "Dynamic",
+              "ObjC",
+              "Override"
+            ],
+            "init_kind": "Designated"
+          }
+        ],
+        "declKind": "Class",
+        "usr": "c:@M@PayKit@objc(cs)PYKPaymentSheetConfiguration",
+        "mangledName": "$s6PayKit28PYKPaymentSheetConfigurationC",
+        "moduleName": "PayKit",
+        "objc_name": "PYKPaymentSheetConfiguration",
+        "declAttributes": [
+          "Final",
+          "AccessControl",
+          "ObjC",
+          "ObjCMembers",
+          "RawDocComment"
+        ],
+        "superclassUsr": "c:objc(cs)NSObject",
+        "superclassNames": [
+          "ObjectiveC.NSObject"
+        ],
+        "conformances": [
+          {
+            "kind": "Conformance",
+            "name": "_KeyValueCodingAndObserving",
+            "printedName": "_KeyValueCodingAndObserving",
+            "usr": "s:10Foundation27_KeyValueCodingAndObservingP",
+            "mangledName": "$s10Foundation27_KeyValueCodingAndObservingP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "_KeyValueCodingAndObservingPublishing",
+            "printedName": "_KeyValueCodingAndObservingPublishing",
+            "usr": "s:10Foundation37_KeyValueCodingAndObservingPublishingP",
+            "mangledName": "$s10Foundation37_KeyValueCodingAndObservingPublishingP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "CVarArg",
+            "printedName": "CVarArg",
+            "usr": "s:s7CVarArgP",
+            "mangledName": "$ss7CVarArgP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Copyable",
+            "printedName": "Copyable",
+            "usr": "s:s8CopyableP",
+            "mangledName": "$ss8CopyableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "CustomDebugStringConvertible",
+            "printedName": "CustomDebugStringConvertible",
+            "usr": "s:s28CustomDebugStringConvertibleP",
+            "mangledName": "$ss28CustomDebugStringConvertibleP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "CustomStringConvertible",
+            "printedName": "CustomStringConvertible",
+            "usr": "s:s23CustomStringConvertibleP",
+            "mangledName": "$ss23CustomStringConvertibleP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Equatable",
+            "printedName": "Equatable",
+            "usr": "s:SQ",
+            "mangledName": "$sSQ"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Escapable",
+            "printedName": "Escapable",
+            "usr": "s:s9EscapableP",
+            "mangledName": "$ss9EscapableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Hashable",
+            "printedName": "Hashable",
+            "usr": "s:SH",
+            "mangledName": "$sSH"
+          }
+        ]
+      },
+      {
+        "kind": "Import",
+        "name": "UIKit",
+        "printedName": "UIKit",
+        "declKind": "Import",
+        "moduleName": "PayKit"
+      },
+      {
+        "kind": "Import",
+        "name": "Foundation",
+        "printedName": "Foundation",
+        "declKind": "Import",
+        "moduleName": "PayKit"
+      },
+      {
+        "kind": "TypeDecl",
+        "name": "PYKWechatConfig",
+        "printedName": "PYKWechatConfig",
+        "children": [
+          {
+            "kind": "Var",
+            "name": "appId",
+            "printedName": "appId",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "String",
+                "printedName": "Swift.String",
+                "usr": "s:SS"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "c:@M@PayKit@objc(cs)PYKWechatConfig(py)appId",
+            "mangledName": "$s6PayKit15PYKWechatConfigC5appIdSSvp",
+            "moduleName": "PayKit",
+            "declAttributes": [
+              "Final",
+              "HasStorage",
+              "AccessControl",
+              "ObjC"
+            ],
+            "isLet": true,
+            "hasStorage": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "String",
+                    "printedName": "Swift.String",
+                    "usr": "s:SS"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "c:@M@PayKit@objc(cs)PYKWechatConfig(im)appId",
+                "mangledName": "$s6PayKit15PYKWechatConfigC5appIdSSvg",
+                "moduleName": "PayKit",
+                "implicit": true,
+                "declAttributes": [
+                  "Final",
+                  "ObjC"
+                ],
+                "accessorKind": "get"
+              }
+            ]
+          },
+          {
+            "kind": "Var",
+            "name": "universalLink",
+            "printedName": "universalLink",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "String",
+                "printedName": "Swift.String",
+                "usr": "s:SS"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "c:@M@PayKit@objc(cs)PYKWechatConfig(py)universalLink",
+            "mangledName": "$s6PayKit15PYKWechatConfigC13universalLinkSSvp",
+            "moduleName": "PayKit",
+            "declAttributes": [
+              "Final",
+              "HasStorage",
+              "AccessControl",
+              "ObjC"
+            ],
+            "isLet": true,
+            "hasStorage": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "String",
+                    "printedName": "Swift.String",
+                    "usr": "s:SS"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "c:@M@PayKit@objc(cs)PYKWechatConfig(im)universalLink",
+                "mangledName": "$s6PayKit15PYKWechatConfigC13universalLinkSSvg",
+                "moduleName": "PayKit",
+                "implicit": true,
+                "declAttributes": [
+                  "Final",
+                  "ObjC"
+                ],
+                "accessorKind": "get"
+              }
+            ]
+          },
+          {
+            "kind": "Constructor",
+            "name": "init",
+            "printedName": "init(appId:universalLink:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "PYKWechatConfig",
+                "printedName": "PayKit.PYKWechatConfig",
+                "usr": "c:@M@PayKit@objc(cs)PYKWechatConfig"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "String",
+                "printedName": "Swift.String",
+                "usr": "s:SS"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "String",
+                "printedName": "Swift.String",
+                "usr": "s:SS"
+              }
+            ],
+            "declKind": "Constructor",
+            "usr": "c:@M@PayKit@objc(cs)PYKWechatConfig(im)initWithAppId:universalLink:",
+            "mangledName": "$s6PayKit15PYKWechatConfigC5appId13universalLinkACSS_SStcfc",
+            "moduleName": "PayKit",
+            "declAttributes": [
+              "AccessControl",
+              "ObjC"
+            ],
+            "init_kind": "Designated"
+          },
+          {
+            "kind": "Constructor",
+            "name": "init",
+            "printedName": "init()",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "PYKWechatConfig",
+                "printedName": "PayKit.PYKWechatConfig",
+                "usr": "c:@M@PayKit@objc(cs)PYKWechatConfig"
+              }
+            ],
+            "declKind": "Constructor",
+            "usr": "c:@M@PayKit@objc(cs)PYKWechatConfig(im)init",
+            "mangledName": "$s6PayKit15PYKWechatConfigCACycfc",
+            "moduleName": "PayKit",
+            "overriding": true,
+            "implicit": true,
+            "objc_name": "init",
+            "declAttributes": [
+              "Dynamic",
+              "ObjC",
+              "Override"
+            ],
+            "init_kind": "Designated"
+          }
+        ],
+        "declKind": "Class",
+        "usr": "c:@M@PayKit@objc(cs)PYKWechatConfig",
+        "mangledName": "$s6PayKit15PYKWechatConfigC",
+        "moduleName": "PayKit",
+        "objc_name": "PYKWechatConfig",
+        "declAttributes": [
+          "Final",
+          "AccessControl",
+          "ObjC",
+          "ObjCMembers"
+        ],
+        "superclassUsr": "c:objc(cs)NSObject",
+        "superclassNames": [
+          "ObjectiveC.NSObject"
+        ],
+        "conformances": [
+          {
+            "kind": "Conformance",
+            "name": "_KeyValueCodingAndObserving",
+            "printedName": "_KeyValueCodingAndObserving",
+            "usr": "s:10Foundation27_KeyValueCodingAndObservingP",
+            "mangledName": "$s10Foundation27_KeyValueCodingAndObservingP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "_KeyValueCodingAndObservingPublishing",
+            "printedName": "_KeyValueCodingAndObservingPublishing",
+            "usr": "s:10Foundation37_KeyValueCodingAndObservingPublishingP",
+            "mangledName": "$s10Foundation37_KeyValueCodingAndObservingPublishingP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "CVarArg",
+            "printedName": "CVarArg",
+            "usr": "s:s7CVarArgP",
+            "mangledName": "$ss7CVarArgP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Copyable",
+            "printedName": "Copyable",
+            "usr": "s:s8CopyableP",
+            "mangledName": "$ss8CopyableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "CustomDebugStringConvertible",
+            "printedName": "CustomDebugStringConvertible",
+            "usr": "s:s28CustomDebugStringConvertibleP",
+            "mangledName": "$ss28CustomDebugStringConvertibleP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "CustomStringConvertible",
+            "printedName": "CustomStringConvertible",
+            "usr": "s:s23CustomStringConvertibleP",
+            "mangledName": "$ss23CustomStringConvertibleP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Equatable",
+            "printedName": "Equatable",
+            "usr": "s:SQ",
+            "mangledName": "$sSQ"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Escapable",
+            "printedName": "Escapable",
+            "usr": "s:s9EscapableP",
+            "mangledName": "$ss9EscapableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Hashable",
+            "printedName": "Hashable",
+            "usr": "s:SH",
+            "mangledName": "$sSH"
+          }
+        ]
+      },
+      {
+        "kind": "Import",
+        "name": "Foundation",
+        "printedName": "Foundation",
+        "declKind": "Import",
+        "moduleName": "PayKit"
+      },
+      {
+        "kind": "TypeDecl",
+        "name": "PYKWechatPayRequest",
+        "printedName": "PYKWechatPayRequest",
+        "children": [
+          {
+            "kind": "Var",
+            "name": "appId",
+            "printedName": "appId",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "String",
+                "printedName": "Swift.String",
+                "usr": "s:SS"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "c:@M@PayKit@objc(cs)PYKWechatPayRequest(py)appId",
+            "mangledName": "$s6PayKit09PYKWechatA7RequestC5appIdSSvp",
+            "moduleName": "PayKit",
+            "declAttributes": [
+              "Final",
+              "HasStorage",
+              "AccessControl",
+              "ObjC"
+            ],
+            "isLet": true,
+            "hasStorage": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "String",
+                    "printedName": "Swift.String",
+                    "usr": "s:SS"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "c:@M@PayKit@objc(cs)PYKWechatPayRequest(im)appId",
+                "mangledName": "$s6PayKit09PYKWechatA7RequestC5appIdSSvg",
+                "moduleName": "PayKit",
+                "implicit": true,
+                "declAttributes": [
+                  "Final",
+                  "ObjC"
+                ],
+                "accessorKind": "get"
+              }
+            ]
+          },
+          {
+            "kind": "Var",
+            "name": "partnerId",
+            "printedName": "partnerId",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "String",
+                "printedName": "Swift.String",
+                "usr": "s:SS"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "c:@M@PayKit@objc(cs)PYKWechatPayRequest(py)partnerId",
+            "mangledName": "$s6PayKit09PYKWechatA7RequestC9partnerIdSSvp",
+            "moduleName": "PayKit",
+            "declAttributes": [
+              "Final",
+              "HasStorage",
+              "AccessControl",
+              "ObjC"
+            ],
+            "isLet": true,
+            "hasStorage": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "String",
+                    "printedName": "Swift.String",
+                    "usr": "s:SS"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "c:@M@PayKit@objc(cs)PYKWechatPayRequest(im)partnerId",
+                "mangledName": "$s6PayKit09PYKWechatA7RequestC9partnerIdSSvg",
+                "moduleName": "PayKit",
+                "implicit": true,
+                "declAttributes": [
+                  "Final",
+                  "ObjC"
+                ],
+                "accessorKind": "get"
+              }
+            ]
+          },
+          {
+            "kind": "Var",
+            "name": "prepayId",
+            "printedName": "prepayId",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "String",
+                "printedName": "Swift.String",
+                "usr": "s:SS"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "c:@M@PayKit@objc(cs)PYKWechatPayRequest(py)prepayId",
+            "mangledName": "$s6PayKit09PYKWechatA7RequestC8prepayIdSSvp",
+            "moduleName": "PayKit",
+            "declAttributes": [
+              "Final",
+              "HasStorage",
+              "AccessControl",
+              "ObjC"
+            ],
+            "isLet": true,
+            "hasStorage": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "String",
+                    "printedName": "Swift.String",
+                    "usr": "s:SS"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "c:@M@PayKit@objc(cs)PYKWechatPayRequest(im)prepayId",
+                "mangledName": "$s6PayKit09PYKWechatA7RequestC8prepayIdSSvg",
+                "moduleName": "PayKit",
+                "implicit": true,
+                "declAttributes": [
+                  "Final",
+                  "ObjC"
+                ],
+                "accessorKind": "get"
+              }
+            ]
+          },
+          {
+            "kind": "Var",
+            "name": "packageValue",
+            "printedName": "packageValue",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "String",
+                "printedName": "Swift.String",
+                "usr": "s:SS"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "c:@M@PayKit@objc(cs)PYKWechatPayRequest(py)packageValue",
+            "mangledName": "$s6PayKit09PYKWechatA7RequestC12packageValueSSvp",
+            "moduleName": "PayKit",
+            "declAttributes": [
+              "Final",
+              "HasStorage",
+              "AccessControl",
+              "ObjC"
+            ],
+            "isLet": true,
+            "hasStorage": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "String",
+                    "printedName": "Swift.String",
+                    "usr": "s:SS"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "c:@M@PayKit@objc(cs)PYKWechatPayRequest(im)packageValue",
+                "mangledName": "$s6PayKit09PYKWechatA7RequestC12packageValueSSvg",
+                "moduleName": "PayKit",
+                "implicit": true,
+                "declAttributes": [
+                  "Final",
+                  "ObjC"
+                ],
+                "accessorKind": "get"
+              }
+            ]
+          },
+          {
+            "kind": "Var",
+            "name": "nonceStr",
+            "printedName": "nonceStr",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "String",
+                "printedName": "Swift.String",
+                "usr": "s:SS"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "c:@M@PayKit@objc(cs)PYKWechatPayRequest(py)nonceStr",
+            "mangledName": "$s6PayKit09PYKWechatA7RequestC8nonceStrSSvp",
+            "moduleName": "PayKit",
+            "declAttributes": [
+              "Final",
+              "HasStorage",
+              "AccessControl",
+              "ObjC"
+            ],
+            "isLet": true,
+            "hasStorage": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "String",
+                    "printedName": "Swift.String",
+                    "usr": "s:SS"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "c:@M@PayKit@objc(cs)PYKWechatPayRequest(im)nonceStr",
+                "mangledName": "$s6PayKit09PYKWechatA7RequestC8nonceStrSSvg",
+                "moduleName": "PayKit",
+                "implicit": true,
+                "declAttributes": [
+                  "Final",
+                  "ObjC"
+                ],
+                "accessorKind": "get"
+              }
+            ]
+          },
+          {
+            "kind": "Var",
+            "name": "timeStamp",
+            "printedName": "timeStamp",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "String",
+                "printedName": "Swift.String",
+                "usr": "s:SS"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "c:@M@PayKit@objc(cs)PYKWechatPayRequest(py)timeStamp",
+            "mangledName": "$s6PayKit09PYKWechatA7RequestC9timeStampSSvp",
+            "moduleName": "PayKit",
+            "declAttributes": [
+              "Final",
+              "HasStorage",
+              "AccessControl",
+              "ObjC"
+            ],
+            "isLet": true,
+            "hasStorage": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "String",
+                    "printedName": "Swift.String",
+                    "usr": "s:SS"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "c:@M@PayKit@objc(cs)PYKWechatPayRequest(im)timeStamp",
+                "mangledName": "$s6PayKit09PYKWechatA7RequestC9timeStampSSvg",
+                "moduleName": "PayKit",
+                "implicit": true,
+                "declAttributes": [
+                  "Final",
+                  "ObjC"
+                ],
+                "accessorKind": "get"
+              }
+            ]
+          },
+          {
+            "kind": "Var",
+            "name": "sign",
+            "printedName": "sign",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "String",
+                "printedName": "Swift.String",
+                "usr": "s:SS"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "c:@M@PayKit@objc(cs)PYKWechatPayRequest(py)sign",
+            "mangledName": "$s6PayKit09PYKWechatA7RequestC4signSSvp",
+            "moduleName": "PayKit",
+            "declAttributes": [
+              "Final",
+              "HasStorage",
+              "AccessControl",
+              "ObjC"
+            ],
+            "isLet": true,
+            "hasStorage": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "String",
+                    "printedName": "Swift.String",
+                    "usr": "s:SS"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "c:@M@PayKit@objc(cs)PYKWechatPayRequest(im)sign",
+                "mangledName": "$s6PayKit09PYKWechatA7RequestC4signSSvg",
+                "moduleName": "PayKit",
+                "implicit": true,
+                "declAttributes": [
+                  "Final",
+                  "ObjC"
+                ],
+                "accessorKind": "get"
+              }
+            ]
+          },
+          {
+            "kind": "Constructor",
+            "name": "init",
+            "printedName": "init(appId:partnerId:prepayId:packageValue:nonceStr:timeStamp:sign:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "PYKWechatPayRequest",
+                "printedName": "PayKit.PYKWechatPayRequest",
+                "usr": "c:@M@PayKit@objc(cs)PYKWechatPayRequest"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "String",
+                "printedName": "Swift.String",
+                "usr": "s:SS"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "String",
+                "printedName": "Swift.String",
+                "usr": "s:SS"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "String",
+                "printedName": "Swift.String",
+                "usr": "s:SS"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "String",
+                "printedName": "Swift.String",
+                "usr": "s:SS"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "String",
+                "printedName": "Swift.String",
+                "usr": "s:SS"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "String",
+                "printedName": "Swift.String",
+                "usr": "s:SS"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "String",
+                "printedName": "Swift.String",
+                "usr": "s:SS"
+              }
+            ],
+            "declKind": "Constructor",
+            "usr": "c:@M@PayKit@objc(cs)PYKWechatPayRequest(im)initWithAppId:partnerId:prepayId:packageValue:nonceStr:timeStamp:sign:",
+            "mangledName": "$s6PayKit09PYKWechatA7RequestC5appId07partnerF006prepayF012packageValue8nonceStr9timeStamp4signACSS_S6Stcfc",
+            "moduleName": "PayKit",
+            "declAttributes": [
+              "AccessControl",
+              "ObjC"
+            ],
+            "init_kind": "Designated"
+          },
+          {
+            "kind": "Constructor",
+            "name": "init",
+            "printedName": "init(channel:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "PYKWechatPayRequest",
+                "printedName": "PayKit.PYKWechatPayRequest",
+                "usr": "c:@M@PayKit@objc(cs)PYKWechatPayRequest"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "PYKPayChannel",
+                "printedName": "PayKit.PYKPayChannel",
+                "usr": "c:@M@PayKit@E@PYKPayChannel"
+              }
+            ],
+            "declKind": "Constructor",
+            "usr": "c:@M@PayKit@objc(cs)PYKWechatPayRequest(im)initWithChannel:",
+            "mangledName": "$s6PayKit09PYKWechatA7RequestC7channelAcA13PYKPayChannelO_tcfc",
+            "moduleName": "PayKit",
+            "overriding": true,
+            "implicit": true,
+            "objc_name": "initWithChannel:",
+            "declAttributes": [
+              "ObjC",
+              "Override"
+            ],
+            "init_kind": "Designated"
+          }
+        ],
+        "declKind": "Class",
+        "usr": "c:@M@PayKit@objc(cs)PYKWechatPayRequest",
+        "mangledName": "$s6PayKit09PYKWechatA7RequestC",
+        "moduleName": "PayKit",
+        "objc_name": "PYKWechatPayRequest",
+        "declAttributes": [
+          "Final",
+          "AccessControl",
+          "ObjC",
+          "ObjCMembers"
+        ],
+        "superclassUsr": "c:@M@PayKit@objc(cs)PYKPayRequest",
+        "superclassNames": [
+          "PayKit.PYKPayRequest",
+          "ObjectiveC.NSObject"
+        ],
+        "conformances": [
+          {
+            "kind": "Conformance",
+            "name": "_KeyValueCodingAndObserving",
+            "printedName": "_KeyValueCodingAndObserving",
+            "usr": "s:10Foundation27_KeyValueCodingAndObservingP",
+            "mangledName": "$s10Foundation27_KeyValueCodingAndObservingP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "_KeyValueCodingAndObservingPublishing",
+            "printedName": "_KeyValueCodingAndObservingPublishing",
+            "usr": "s:10Foundation37_KeyValueCodingAndObservingPublishingP",
+            "mangledName": "$s10Foundation37_KeyValueCodingAndObservingPublishingP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "CVarArg",
+            "printedName": "CVarArg",
+            "usr": "s:s7CVarArgP",
+            "mangledName": "$ss7CVarArgP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Copyable",
+            "printedName": "Copyable",
+            "usr": "s:s8CopyableP",
+            "mangledName": "$ss8CopyableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "CustomDebugStringConvertible",
+            "printedName": "CustomDebugStringConvertible",
+            "usr": "s:s28CustomDebugStringConvertibleP",
+            "mangledName": "$ss28CustomDebugStringConvertibleP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "CustomStringConvertible",
+            "printedName": "CustomStringConvertible",
+            "usr": "s:s23CustomStringConvertibleP",
+            "mangledName": "$ss23CustomStringConvertibleP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Equatable",
+            "printedName": "Equatable",
+            "usr": "s:SQ",
+            "mangledName": "$sSQ"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Escapable",
+            "printedName": "Escapable",
+            "usr": "s:s9EscapableP",
+            "mangledName": "$ss9EscapableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Hashable",
+            "printedName": "Hashable",
+            "usr": "s:SH",
+            "mangledName": "$sSH"
+          }
+        ]
+      },
+      {
+        "kind": "Import",
+        "name": "Foundation",
+        "printedName": "Foundation",
+        "declKind": "Import",
+        "moduleName": "PayKit"
+      },
+      {
+        "kind": "Import",
+        "name": "Foundation",
+        "printedName": "Foundation",
+        "declKind": "Import",
+        "moduleName": "PayKit"
+      },
+      {
+        "kind": "Import",
+        "name": "UIKit",
+        "printedName": "UIKit",
+        "declKind": "Import",
+        "moduleName": "PayKit"
+      },
+      {
+        "kind": "Import",
+        "name": "Foundation",
+        "printedName": "Foundation",
+        "declKind": "Import",
+        "moduleName": "PayKit"
+      },
+      {
+        "kind": "TypeDecl",
+        "name": "PayKitResult",
+        "printedName": "PayKitResult",
+        "children": [
+          {
+            "kind": "Var",
+            "name": "success",
+            "printedName": "success",
+            "children": [
+              {
+                "kind": "TypeFunc",
+                "name": "Function",
+                "printedName": "(PayKit.PayKitResult.Type) -> (PayKit.PYKPayResult) -> PayKit.PayKitResult",
+                "children": [
+                  {
+                    "kind": "TypeFunc",
+                    "name": "Function",
+                    "printedName": "(PayKit.PYKPayResult) -> PayKit.PayKitResult",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "PayKitResult",
+                        "printedName": "PayKit.PayKitResult",
+                        "usr": "s:6PayKit0aB6ResultO"
+                      },
+                      {
+                        "kind": "TypeNominal",
+                        "name": "PYKPayResult",
+                        "printedName": "PayKit.PYKPayResult",
+                        "usr": "c:@M@PayKit@objc(cs)PYKPayResult"
+                      }
+                    ]
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Metatype",
+                    "printedName": "PayKit.PayKitResult.Type",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "PayKitResult",
+                        "printedName": "PayKit.PayKitResult",
+                        "usr": "s:6PayKit0aB6ResultO"
+                      }
+                    ]
+                  }
+                ]
+              }
+            ],
+            "declKind": "EnumElement",
+            "usr": "s:6PayKit0aB6ResultO7successyAcA06PYKPayC0CcACmF",
+            "mangledName": "$s6PayKit0aB6ResultO7successyAcA06PYKPayC0CcACmF",
+            "moduleName": "PayKit"
+          },
+          {
+            "kind": "Var",
+            "name": "cancelled",
+            "printedName": "cancelled",
+            "children": [
+              {
+                "kind": "TypeFunc",
+                "name": "Function",
+                "printedName": "(PayKit.PayKitResult.Type) -> (PayKit.PYKPayResult) -> PayKit.PayKitResult",
+                "children": [
+                  {
+                    "kind": "TypeFunc",
+                    "name": "Function",
+                    "printedName": "(PayKit.PYKPayResult) -> PayKit.PayKitResult",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "PayKitResult",
+                        "printedName": "PayKit.PayKitResult",
+                        "usr": "s:6PayKit0aB6ResultO"
+                      },
+                      {
+                        "kind": "TypeNominal",
+                        "name": "PYKPayResult",
+                        "printedName": "PayKit.PYKPayResult",
+                        "usr": "c:@M@PayKit@objc(cs)PYKPayResult"
+                      }
+                    ]
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Metatype",
+                    "printedName": "PayKit.PayKitResult.Type",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "PayKitResult",
+                        "printedName": "PayKit.PayKitResult",
+                        "usr": "s:6PayKit0aB6ResultO"
+                      }
+                    ]
+                  }
+                ]
+              }
+            ],
+            "declKind": "EnumElement",
+            "usr": "s:6PayKit0aB6ResultO9cancelledyAcA06PYKPayC0CcACmF",
+            "mangledName": "$s6PayKit0aB6ResultO9cancelledyAcA06PYKPayC0CcACmF",
+            "moduleName": "PayKit"
+          },
+          {
+            "kind": "Var",
+            "name": "failed",
+            "printedName": "failed",
+            "children": [
+              {
+                "kind": "TypeFunc",
+                "name": "Function",
+                "printedName": "(PayKit.PayKitResult.Type) -> (PayKit.PYKPayResult) -> PayKit.PayKitResult",
+                "children": [
+                  {
+                    "kind": "TypeFunc",
+                    "name": "Function",
+                    "printedName": "(PayKit.PYKPayResult) -> PayKit.PayKitResult",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "PayKitResult",
+                        "printedName": "PayKit.PayKitResult",
+                        "usr": "s:6PayKit0aB6ResultO"
+                      },
+                      {
+                        "kind": "TypeNominal",
+                        "name": "PYKPayResult",
+                        "printedName": "PayKit.PYKPayResult",
+                        "usr": "c:@M@PayKit@objc(cs)PYKPayResult"
+                      }
+                    ]
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Metatype",
+                    "printedName": "PayKit.PayKitResult.Type",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "PayKitResult",
+                        "printedName": "PayKit.PayKitResult",
+                        "usr": "s:6PayKit0aB6ResultO"
+                      }
+                    ]
+                  }
+                ]
+              }
+            ],
+            "declKind": "EnumElement",
+            "usr": "s:6PayKit0aB6ResultO6failedyAcA06PYKPayC0CcACmF",
+            "mangledName": "$s6PayKit0aB6ResultO6failedyAcA06PYKPayC0CcACmF",
+            "moduleName": "PayKit"
+          },
+          {
+            "kind": "Constructor",
+            "name": "init",
+            "printedName": "init(_:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "PayKitResult",
+                "printedName": "PayKit.PayKitResult",
+                "usr": "s:6PayKit0aB6ResultO"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "PYKPayResult",
+                "printedName": "PayKit.PYKPayResult",
+                "usr": "c:@M@PayKit@objc(cs)PYKPayResult"
+              }
+            ],
+            "declKind": "Constructor",
+            "usr": "s:6PayKit0aB6ResultOyAcA06PYKPayC0Ccfc",
+            "mangledName": "$s6PayKit0aB6ResultOyAcA06PYKPayC0Ccfc",
+            "moduleName": "PayKit",
+            "declAttributes": [
+              "AccessControl"
+            ],
+            "init_kind": "Designated"
+          },
+          {
+            "kind": "Var",
+            "name": "status",
+            "printedName": "status",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "PYKPayStatus",
+                "printedName": "PayKit.PYKPayStatus",
+                "usr": "c:@M@PayKit@E@PYKPayStatus"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:6PayKit0aB6ResultO6statusAA12PYKPayStatusOvp",
+            "mangledName": "$s6PayKit0aB6ResultO6statusAA12PYKPayStatusOvp",
+            "moduleName": "PayKit",
+            "declAttributes": [
+              "AccessControl"
+            ],
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "PYKPayStatus",
+                    "printedName": "PayKit.PYKPayStatus",
+                    "usr": "c:@M@PayKit@E@PYKPayStatus"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:6PayKit0aB6ResultO6statusAA12PYKPayStatusOvg",
+                "mangledName": "$s6PayKit0aB6ResultO6statusAA12PYKPayStatusOvg",
+                "moduleName": "PayKit",
+                "accessorKind": "get"
+              }
+            ]
+          },
+          {
+            "kind": "Var",
+            "name": "result",
+            "printedName": "result",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "PYKPayResult",
+                "printedName": "PayKit.PYKPayResult",
+                "usr": "c:@M@PayKit@objc(cs)PYKPayResult"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:6PayKit0aB6ResultO6resultAA06PYKPayC0Cvp",
+            "mangledName": "$s6PayKit0aB6ResultO6resultAA06PYKPayC0Cvp",
+            "moduleName": "PayKit",
+            "declAttributes": [
+              "AccessControl"
+            ],
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "PYKPayResult",
+                    "printedName": "PayKit.PYKPayResult",
+                    "usr": "c:@M@PayKit@objc(cs)PYKPayResult"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:6PayKit0aB6ResultO6resultAA06PYKPayC0Cvg",
+                "mangledName": "$s6PayKit0aB6ResultO6resultAA06PYKPayC0Cvg",
+                "moduleName": "PayKit",
+                "accessorKind": "get"
+              }
+            ]
+          }
+        ],
+        "declKind": "Enum",
+        "usr": "s:6PayKit0aB6ResultO",
+        "mangledName": "$s6PayKit0aB6ResultO",
+        "moduleName": "PayKit",
+        "declAttributes": [
+          "AccessControl",
+          "RawDocComment"
+        ],
+        "conformances": [
+          {
+            "kind": "Conformance",
+            "name": "Copyable",
+            "printedName": "Copyable",
+            "usr": "s:s8CopyableP",
+            "mangledName": "$ss8CopyableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Escapable",
+            "printedName": "Escapable",
+            "usr": "s:s9EscapableP",
+            "mangledName": "$ss9EscapableP"
+          }
+        ]
+      },
+      {
+        "kind": "Import",
+        "name": "Foundation",
+        "printedName": "Foundation",
+        "declKind": "Import",
+        "moduleName": "PayKit"
+      },
+      {
+        "kind": "Import",
+        "name": "Foundation",
+        "printedName": "Foundation",
+        "declKind": "Import",
+        "moduleName": "PayKit"
+      },
+      {
+        "kind": "Import",
+        "name": "ObjectiveC.runtime",
+        "printedName": "ObjectiveC.runtime",
+        "declKind": "Import",
+        "moduleName": "PayKit"
+      }
+    ],
+    "json_format_version": 8
+  },
+  "ConstValues": [
+    {
+      "filePath": "\/Users\/maxiao\/Desktop\/bmad\/sdk\/PayKit\/Sources\/PayKit\/Adapters\/AlipayAdapter.swift",
+      "kind": "StringLiteral",
+      "offset": 1133,
+      "length": 27,
+      "value": "\"alipay_native_unavailable\""
+    },
+    {
+      "filePath": "\/Users\/maxiao\/Desktop\/bmad\/sdk\/PayKit\/Sources\/PayKit\/Adapters\/AlipayAdapter.swift",
+      "kind": "StringLiteral",
+      "offset": 1174,
+      "length": 30,
+      "value": "\"AlipaySDK is not integrated.\""
+    },
+    {
+      "filePath": "\/Users\/maxiao\/Desktop\/bmad\/sdk\/PayKit\/Sources\/PayKit\/Adapters\/AlipayAdapter.swift",
+      "kind": "StringLiteral",
+      "offset": 1260,
+      "length": 31,
+      "value": "\"payOrder:fromScheme:callback:\""
+    },
+    {
+      "filePath": "\/Users\/maxiao\/Desktop\/bmad\/sdk\/PayKit\/Sources\/PayKit\/Adapters\/AlipayAdapter.swift",
+      "kind": "StringLiteral",
+      "offset": 1416,
+      "length": 30,
+      "value": "\"alipay_pay_order_unavailable\""
+    },
+    {
+      "filePath": "\/Users\/maxiao\/Desktop\/bmad\/sdk\/PayKit\/Sources\/PayKit\/Adapters\/AlipayAdapter.swift",
+      "kind": "StringLiteral",
+      "offset": 1460,
+      "length": 59,
+      "value": "\"AlipaySDK payOrder:fromScheme:callback: is not available.\""
+    },
+    {
+      "filePath": "\/Users\/maxiao\/Desktop\/bmad\/sdk\/PayKit\/Sources\/PayKit\/Adapters\/AlipayAdapter.swift",
+      "kind": "BooleanLiteral",
+      "offset": 2233,
+      "length": 5,
+      "value": "false"
+    },
+    {
+      "filePath": "\/Users\/maxiao\/Desktop\/bmad\/sdk\/PayKit\/Sources\/PayKit\/Adapters\/AlipayAdapter.swift",
+      "kind": "StringLiteral",
+      "offset": 2293,
+      "length": 48,
+      "value": "\"processOrderWithPaymentResult:standbyCallback:\""
+    },
+    {
+      "filePath": "\/Users\/maxiao\/Desktop\/bmad\/sdk\/PayKit\/Sources\/PayKit\/Adapters\/AlipayAdapter.swift",
+      "kind": "BooleanLiteral",
+      "offset": 2449,
+      "length": 5,
+      "value": "false"
+    },
+    {
+      "filePath": "\/Users\/maxiao\/Desktop\/bmad\/sdk\/PayKit\/Sources\/PayKit\/Adapters\/AlipayAdapter.swift",
+      "kind": "BooleanLiteral",
+      "offset": 2927,
+      "length": 4,
+      "value": "true"
+    },
+    {
+      "filePath": "\/Users\/maxiao\/Desktop\/bmad\/sdk\/PayKit\/Sources\/PayKit\/Adapters\/AlipayAdapter.swift",
+      "kind": "StringLiteral",
+      "offset": 3042,
+      "length": 11,
+      "value": "\"AlipaySDK\""
+    },
+    {
+      "filePath": "\/Users\/maxiao\/Desktop\/bmad\/sdk\/PayKit\/Sources\/PayKit\/Adapters\/AlipayAdapter.swift",
+      "kind": "StringLiteral",
+      "offset": 3139,
+      "length": 16,
+      "value": "\"defaultService\""
+    },
+    {
+      "filePath": "\/Users\/maxiao\/Desktop\/bmad\/sdk\/PayKit\/Sources\/PayKit\/Public\/PYKPayTypes.swift",
+      "kind": "IntegerLiteral",
+      "offset": 92,
+      "length": 1,
+      "value": "0"
+    },
+    {
+      "filePath": "\/Users\/maxiao\/Desktop\/bmad\/sdk\/PayKit\/Sources\/PayKit\/Public\/PYKPayTypes.swift",
+      "kind": "IntegerLiteral",
+      "offset": 103,
+      "length": 6,
+      "value": "1"
+    },
+    {
+      "filePath": "\/Users\/maxiao\/Desktop\/bmad\/sdk\/PayKit\/Sources\/PayKit\/Public\/PYKPayTypes.swift",
+      "kind": "IntegerLiteral",
+      "offset": 119,
+      "length": 6,
+      "value": "2"
+    },
+    {
+      "filePath": "\/Users\/maxiao\/Desktop\/bmad\/sdk\/PayKit\/Sources\/PayKit\/Public\/PYKPayTypes.swift",
+      "kind": "IntegerLiteral",
+      "offset": 135,
+      "length": 4,
+      "value": "3"
+    },
+    {
+      "filePath": "\/Users\/maxiao\/Desktop\/bmad\/sdk\/PayKit\/Sources\/PayKit\/Public\/PYKPayTypes.swift",
+      "kind": "IntegerLiteral",
+      "offset": 214,
+      "length": 1,
+      "value": "0"
+    },
+    {
+      "filePath": "\/Users\/maxiao\/Desktop\/bmad\/sdk\/PayKit\/Sources\/PayKit\/Public\/PYKPayTypes.swift",
+      "kind": "IntegerLiteral",
+      "offset": 225,
+      "length": 9,
+      "value": "1"
+    },
+    {
+      "filePath": "\/Users\/maxiao\/Desktop\/bmad\/sdk\/PayKit\/Sources\/PayKit\/Public\/PYKPayTypes.swift",
+      "kind": "IntegerLiteral",
+      "offset": 244,
+      "length": 6,
+      "value": "2"
+    },
+    {
+      "filePath": "\/Users\/maxiao\/Desktop\/bmad\/sdk\/PayKit\/Sources\/PayKit\/Public\/PYKPaymentSheetConfiguration.swift",
+      "kind": "BooleanLiteral",
+      "offset": 607,
+      "length": 4,
+      "value": "true"
+    },
+    {
+      "filePath": "\/Users\/maxiao\/Desktop\/bmad\/sdk\/PayKit\/Sources\/PayKit\/Public\/PYKPaymentSheetConfiguration.swift",
+      "kind": "StringLiteral",
+      "offset": 819,
+      "length": 38,
+      "value": "\"亿万用户的选择，安全快速\""
+    },
+    {
+      "filePath": "\/Users\/maxiao\/Desktop\/bmad\/sdk\/PayKit\/Sources\/PayKit\/Public\/PYKPaymentSheetConfiguration.swift",
+      "kind": "StringLiteral",
+      "offset": 1024,
+      "length": 35,
+      "value": "\"数亿用户都在用，真安全\""
+    },
+    {
+      "filePath": "\/Users\/maxiao\/Desktop\/bmad\/sdk\/PayKit\/Sources\/PayKit\/UI\/PYKPaymentSheetViewController.swift",
+      "kind": "BooleanLiteral",
+      "offset": 673,
+      "length": 5,
+      "value": "false"
+    },
+    {
+      "filePath": "\/Users\/maxiao\/Desktop\/bmad\/sdk\/PayKit\/Sources\/PayKit\/UI\/PYKPaymentSheetViewController.swift",
+      "kind": "Dictionary",
+      "offset": 774,
+      "length": 3,
+      "value": "[]"
+    },
+    {
+      "filePath": "\/Users\/maxiao\/Desktop\/bmad\/sdk\/PayKit\/Sources\/PayKit\/UI\/PYKPaymentSheetViewController.swift",
+      "kind": "FloatLiteral",
+      "offset": 12427,
+      "length": 3,
+      "value": "0.7"
+    },
+    {
+      "filePath": "\/Users\/maxiao\/Desktop\/bmad\/sdk\/PayKit\/Sources\/PayKit\/UI\/PYKPaymentSheetViewController.swift",
+      "kind": "IntegerLiteral",
+      "offset": 12433,
+      "length": 1,
+      "value": "1"
+    },
+    {
+      "filePath": "\/Users\/maxiao\/Desktop\/bmad\/sdk\/PayKit\/Sources\/PayKit\/UI\/PYKPaymentSheetViewController.swift",
+      "kind": "IntegerLiteral",
+      "offset": 12984,
+      "length": 8,
+      "value": "0x1B1F29"
+    },
+    {
+      "filePath": "\/Users\/maxiao\/Desktop\/bmad\/sdk\/PayKit\/Sources\/PayKit\/UI\/PYKPaymentSheetViewController.swift",
+      "kind": "IntegerLiteral",
+      "offset": 13023,
+      "length": 8,
+      "value": "0x0E1117"
+    },
+    {
+      "filePath": "\/Users\/maxiao\/Desktop\/bmad\/sdk\/PayKit\/Sources\/PayKit\/UI\/PYKPaymentSheetViewController.swift",
+      "kind": "IntegerLiteral",
+      "offset": 13063,
+      "length": 8,
+      "value": "0x252A36"
+    },
+    {
+      "filePath": "\/Users\/maxiao\/Desktop\/bmad\/sdk\/PayKit\/Sources\/PayKit\/UI\/PYKPaymentSheetViewController.swift",
+      "kind": "IntegerLiteral",
+      "offset": 13108,
+      "length": 8,
+      "value": "0xF3F5FA"
+    },
+    {
+      "filePath": "\/Users\/maxiao\/Desktop\/bmad\/sdk\/PayKit\/Sources\/PayKit\/UI\/PYKPaymentSheetViewController.swift",
+      "kind": "IntegerLiteral",
+      "offset": 13155,
+      "length": 8,
+      "value": "0x8B93A7"
+    },
+    {
+      "filePath": "\/Users\/maxiao\/Desktop\/bmad\/sdk\/PayKit\/Sources\/PayKit\/UI\/PYKPaymentSheetViewController.swift",
+      "kind": "IntegerLiteral",
+      "offset": 13201,
+      "length": 8,
+      "value": "0x5C6378"
+    },
+    {
+      "filePath": "\/Users\/maxiao\/Desktop\/bmad\/sdk\/PayKit\/Sources\/PayKit\/UI\/PYKPaymentSheetViewController.swift",
+      "kind": "IntegerLiteral",
+      "offset": 13241,
+      "length": 8,
+      "value": "0xFF5C39"
+    },
+    {
+      "filePath": "\/Users\/maxiao\/Desktop\/bmad\/sdk\/PayKit\/Sources\/PayKit\/Core\/PayCallbackRouter.swift",
+      "kind": "Dictionary",
+      "offset": 152,
+      "length": 3,
+      "value": "[]"
+    },
+    {
+      "filePath": "\/Users\/maxiao\/Desktop\/bmad\/sdk\/PayKit\/Sources\/PayKit\/UI\/PayKit+PaymentSheet.swift",
+      "kind": "Array",
+      "offset": 292,
+      "length": 2,
+      "value": "[]"
+    },
+    {
+      "filePath": "\/Users\/maxiao\/Desktop\/bmad\/sdk\/PayKit\/Sources\/PayKit\/PayKitWorkspace.swift",
+      "kind": "StringLiteral",
+      "offset": 51,
+      "length": 8,
+      "value": "\"PayKit\""
+    },
+    {
+      "filePath": "\/Users\/maxiao\/Desktop\/bmad\/sdk\/PayKit\/Sources\/PayKit\/PayKitWorkspace.swift",
+      "kind": "StringLiteral",
+      "offset": 104,
+      "length": 6,
+      "value": "\"15.0\""
+    },
+    {
+      "filePath": "\/Users\/maxiao\/Desktop\/bmad\/sdk\/PayKit\/Sources\/PayKit\/Adapters\/WeChatPayAdapter.swift",
+      "kind": "StringLiteral",
+      "offset": 1870,
+      "length": 7,
+      "value": "\"WXApi\""
+    },
+    {
+      "filePath": "\/Users\/maxiao\/Desktop\/bmad\/sdk\/PayKit\/Sources\/PayKit\/Adapters\/WeChatPayAdapter.swift",
+      "kind": "StringLiteral",
+      "offset": 1963,
+      "length": 25,
+      "value": "\"handleOpenURL:delegate:\""
+    },
+    {
+      "filePath": "\/Users\/maxiao\/Desktop\/bmad\/sdk\/PayKit\/Sources\/PayKit\/Adapters\/WeChatPayAdapter.swift",
+      "kind": "StringLiteral",
+      "offset": 2562,
+      "length": 28,
+      "value": "\"registerApp:universalLink:\""
+    },
+    {
+      "filePath": "\/Users\/maxiao\/Desktop\/bmad\/sdk\/PayKit\/Sources\/PayKit\/Adapters\/WeChatPayAdapter.swift",
+      "kind": "StringLiteral",
+      "offset": 3011,
+      "length": 2,
+      "value": "\"\""
+    },
+    {
+      "filePath": "\/Users\/maxiao\/Desktop\/bmad\/sdk\/PayKit\/Sources\/PayKit\/Adapters\/WeChatPayAdapter.swift",
+      "kind": "StringLiteral",
+      "offset": 3164,
+      "length": 10,
+      "value": "\"sendReq:\""
+    },
+    {
+      "filePath": "\/Users\/maxiao\/Desktop\/bmad\/sdk\/PayKit\/Sources\/PayKit\/Adapters\/WeChatPayAdapter.swift",
+      "kind": "StringLiteral",
+      "offset": 3287,
+      "length": 25,
+      "value": "\"wechat_send_unavailable\""
+    },
+    {
+      "filePath": "\/Users\/maxiao\/Desktop\/bmad\/sdk\/PayKit\/Sources\/PayKit\/Adapters\/WeChatPayAdapter.swift",
+      "kind": "StringLiteral",
+      "offset": 3326,
+      "length": 34,
+      "value": "\"WXApi sendReq: is not available.\""
+    },
+    {
+      "filePath": "\/Users\/maxiao\/Desktop\/bmad\/sdk\/PayKit\/Sources\/PayKit\/Adapters\/WeChatPayAdapter.swift",
+      "kind": "StringLiteral",
+      "offset": 3694,
+      "length": 22,
+      "value": "\"wechat_send_rejected\""
+    },
+    {
+      "filePath": "\/Users\/maxiao\/Desktop\/bmad\/sdk\/PayKit\/Sources\/PayKit\/Adapters\/WeChatPayAdapter.swift",
+      "kind": "StringLiteral",
+      "offset": 3730,
+      "length": 37,
+      "value": "\"WXApi rejected the payment request.\""
+    }
+  ]
+}

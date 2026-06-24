@@ -16,7 +16,7 @@ final class PayKitFacadeTests: XCTestCase {
         let wechat = PYKWechatConfig(appId: "wx-demo", universalLink: "https://example.com/pay/")
         let alipay = PYKAlipayConfig(appScheme: "paykit-demo")
 
-        PayKit.setup(wechat: wechat, alipay: alipay)
+        PYKPayKit.setup(wechat: wechat, alipay: alipay)
 
         XCTAssertTrue(PYKPayKit.currentWechatConfig === wechat)
         XCTAssertTrue(PYKPayKit.currentAlipayConfig === alipay)
@@ -26,7 +26,7 @@ final class PayKitFacadeTests: XCTestCase {
         let request = PYKPayRequest(channel: .unknown)
         var receivedResult: PYKPayResult?
 
-        PayKit.pay(request: request) { result in
+        PYKPayKit.pay(request: request) { result in
             receivedResult = result
         }
 

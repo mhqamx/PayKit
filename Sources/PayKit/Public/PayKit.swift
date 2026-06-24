@@ -1,22 +1,10 @@
 import Foundation
 
-public enum PayKit {
-    public static func setup(wechat: PYKWechatConfig?, alipay: PYKAlipayConfig?) {
-        PYKPayKit.setup(wechat: wechat, alipay: alipay)
-    }
-
-    public static func pay(request: PYKPayRequest, completion: @escaping (PYKPayResult) -> Void) {
-        PYKPayKit.pay(request: request, completion: completion)
-    }
-
-    public static func handleOpenURL(_ url: URL) -> Bool {
-        PYKPayKit.handleOpenURL(url)
-    }
-
-    public static func handleUserActivity(_ userActivity: NSUserActivity) -> Bool {
-        PYKPayKit.handleUserActivity(userActivity)
-    }
-}
+// Note: there is intentionally no `enum PayKit` here. A public type named
+// `PayKit` collides with the module name `PayKit`, which breaks the textual
+// `.swiftinterface` emitted for binary (library-evolution) distribution. The
+// single Swift + Objective-C entry point is `PYKPayKit`; Swift-only conveniences
+// live in `PYKPayKit` extensions.
 
 public enum PayKitResult {
     case success(PYKPayResult)

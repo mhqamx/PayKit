@@ -50,7 +50,7 @@ final class ChannelAdapterTests: XCTestCase {
         )
         var results: [PYKPayResult] = []
 
-        PayKit.pay(request: request) { result in
+        PYKPayKit.pay(request: request) { result in
             results.append(result)
         }
 
@@ -58,8 +58,8 @@ final class ChannelAdapterTests: XCTestCase {
         XCTAssertEqual(client.capturedRequest?.packageValue, "Sign=WXPay")
         XCTAssertTrue(results.isEmpty)
 
-        let handled = PayKit.handleOpenURL(URL(string: "paykit://paykit-wechat?errCode=0&errStr=ok")!)
-        let handledAgain = PayKit.handleOpenURL(URL(string: "paykit://paykit-wechat?errCode=-2&errStr=cancel")!)
+        let handled = PYKPayKit.handleOpenURL(URL(string: "paykit://paykit-wechat?errCode=0&errStr=ok")!)
+        let handledAgain = PYKPayKit.handleOpenURL(URL(string: "paykit://paykit-wechat?errCode=-2&errStr=cancel")!)
 
         XCTAssertTrue(handled)
         XCTAssertFalse(handledAgain)
@@ -80,7 +80,7 @@ final class ChannelAdapterTests: XCTestCase {
         let request = PYKAlipayPayRequest(orderString: "order=demo", appScheme: "paykit")
         var results: [PYKPayResult] = []
 
-        PayKit.pay(request: request) { result in
+        PYKPayKit.pay(request: request) { result in
             results.append(result)
         }
 
@@ -88,8 +88,8 @@ final class ChannelAdapterTests: XCTestCase {
         XCTAssertEqual(client.capturedRequest?.appScheme, "paykit")
         XCTAssertTrue(results.isEmpty)
 
-        let handled = PayKit.handleOpenURL(URL(string: "paykit://paykit-alipay?resultStatus=6001&memo=cancel")!)
-        let handledAgain = PayKit.handleOpenURL(URL(string: "paykit://paykit-alipay?resultStatus=9000&memo=ok")!)
+        let handled = PYKPayKit.handleOpenURL(URL(string: "paykit://paykit-alipay?resultStatus=6001&memo=cancel")!)
+        let handledAgain = PYKPayKit.handleOpenURL(URL(string: "paykit://paykit-alipay?resultStatus=9000&memo=ok")!)
 
         XCTAssertTrue(handled)
         XCTAssertFalse(handledAgain)
@@ -117,7 +117,7 @@ final class ChannelAdapterTests: XCTestCase {
         )
         var result: PYKPayResult?
 
-        PayKit.pay(request: request) { payResult in
+        PYKPayKit.pay(request: request) { payResult in
             result = payResult
         }
 

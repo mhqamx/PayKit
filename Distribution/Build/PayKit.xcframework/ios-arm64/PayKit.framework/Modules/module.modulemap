@@ -1,0 +1,3 @@
+framework module PayKit {
+  header "PayKit-Swift.h"
+}

@@ -1,0 +1,28 @@
+name: PayKit
+options:
+  bundleIdPrefix: com.paykit
+  deploymentTarget:
+    iOS: "15.0"
+targets:
+  PayKit:
+    type: framework
+    platform: iOS
+    deploymentTarget: "15.0"
+    sources:
+      - path: Sources/PayKit
+    settings:
+      base:
+        PRODUCT_NAME: PayKit
+        PRODUCT_BUNDLE_IDENTIFIER: com.paykit.PayKit
+        GENERATE_INFOPLIST_FILE: YES
+        DEFINES_MODULE: YES
+        BUILD_LIBRARY_FOR_DISTRIBUTION: YES
+        SKIP_INSTALL: NO
+        SWIFT_VERSION: "5.9"
+        MARKETING_VERSION: "0.3.0"
+        CURRENT_PROJECT_VERSION: "1"
+schemes:
+  PayKit:
+    build:
+      targets:
+        PayKit: all

@@ -40,9 +40,10 @@ extension PYKPayKit {
     }
 }
 
-public extension PayKit {
-    /// Swift wrapper over the Objective-C-visible base (AD-1). Uses a `Result`
-    /// request provider for Swift ergonomics without forking behavior.
+public extension PYKPayKit {
+    /// Swift-ergonomic convenience over the Objective-C-visible base (AD-1):
+    /// uses a `Result` request provider. Overloads the `@objc` entry point
+    /// above without forking behavior.
     static func presentPaymentSheet(
         from viewController: UIViewController,
         configuration: PYKPaymentSheetConfiguration = .standard(),

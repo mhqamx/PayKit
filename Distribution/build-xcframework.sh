@@ -27,7 +27,8 @@ xcodebuild archive \
   -destination "generic/platform=iOS" \
   -archivePath "$BUILD_DIR/PayKit-iOS.xcarchive" \
   SKIP_INSTALL=NO \
-  BUILD_LIBRARY_FOR_DISTRIBUTION=YES
+  BUILD_LIBRARY_FOR_DISTRIBUTION=YES \
+  CODE_SIGNING_ALLOWED=NO
 
 xcodebuild archive \
   $CONTAINER_ARGS \
@@ -35,7 +36,8 @@ xcodebuild archive \
   -destination "generic/platform=iOS Simulator" \
   -archivePath "$BUILD_DIR/PayKit-iOS-Simulator.xcarchive" \
   SKIP_INSTALL=NO \
-  BUILD_LIBRARY_FOR_DISTRIBUTION=YES
+  BUILD_LIBRARY_FOR_DISTRIBUTION=YES \
+  CODE_SIGNING_ALLOWED=NO
 
 xcodebuild -create-xcframework \
   -framework "$BUILD_DIR/PayKit-iOS.xcarchive/Products/Library/Frameworks/PayKit.framework" \

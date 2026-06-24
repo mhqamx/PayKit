@@ -4,7 +4,7 @@ import UIKit
 /// Internal bottom payment sheet rendered by the SDK. Driven entirely by a
 /// `PYKPaymentSheetConfiguration`; reports the confirmed channel or a cancel
 /// back to the coordinator. Merchants never instantiate this directly — they
-/// call `PayKit.presentPaymentSheet` / `PYKPayKit presentPaymentSheet...`.
+/// call `PYKPayKit.presentPaymentSheet(...)`.
 final class PYKPaymentSheetViewController: UIViewController {
     private let configuration: PYKPaymentSheetConfiguration
     private let onConfirm: (PYKPayChannel) -> Void

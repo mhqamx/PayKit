@@ -18,7 +18,7 @@ final class MockAdapterTests: XCTestCase {
             PYKPayKit.registerMockAdapterForTesting(result: expected)
 
             var actual: PYKPayResult?
-            PayKit.pay(request: PYKPayRequest(channel: .mock)) { result in
+            PYKPayKit.pay(request: PYKPayRequest(channel: .mock)) { result in
                 actual = result
             }
 

@@ -1,0 +1,133 @@
+// swift-interface-format-version: 1.0
+// swift-compiler-version: Apple Swift version 6.3.2 effective-5.10 (swiftlang-6.3.2.1.108 clang-2100.1.1.101)
+// swift-module-flags: -target x86_64-apple-ios15.0-simulator -enable-objc-interop -enable-library-evolution -swift-version 5 -O -enable-experimental-feature DebugDescriptionMacro -enable-bare-slash-regex -module-name PayKit
+// swift-module-flags-ignorable: -no-verify-emitted-module-interface -formal-cxx-interoperability-mode=off -interface-compiler-version 6.3.2
+import Foundation
+import ObjectiveC
+import Swift
+import UIKit
+import _Concurrency
+import _StringProcessing
+import _SwiftConcurrencyShims
+import ObjectiveC.runtime
+@objcMembers @objc(PYKAlipayConfig) final public class PYKAlipayConfig : ObjectiveC.NSObject {
+  @objc final public let appScheme: Swift.String
+  @objc public init(appScheme: Swift.String)
+  @objc deinit
+}
+@objcMembers @objc(PYKAlipayPayRequest) final public class PYKAlipayPayRequest : PayKit.PYKPayRequest {
+  @objc final public let orderString: Swift.String
+  @objc final public let appScheme: Swift.String
+  @objc public init(orderString: Swift.String, appScheme: Swift.String)
+  @objc deinit
+}
+@objcMembers @objc(PYKPayError) final public class PYKPayError : ObjectiveC.NSObject {
+  @objc final public let code: Swift.String
+  @objc final public let message: Swift.String
+  @objc public init(code: Swift.String, message: Swift.String)
+  @objc deinit
+}
+@_inheritsConvenienceInitializers @objcMembers @objc(PYKPayKit) final public class PYKPayKit : ObjectiveC.NSObject {
+  @objc override dynamic public init()
+  @objc(setupWithWechat:alipay:) public static func setup(wechat: PayKit.PYKWechatConfig?, alipay: PayKit.PYKAlipayConfig?)
+  @objc(payWithRequest:completion:) public static func pay(request: PayKit.PYKPayRequest, completion: @escaping (PayKit.PYKPayResult) -> Swift.Void)
+  @objc(handleOpenURL:) public static func handleOpenURL(_ url: Foundation.URL) -> Swift.Bool
+  @objc(handleUserActivity:) public static func handleUserActivity(_ userActivity: Foundation.NSUserActivity) -> Swift.Bool
+  @objc deinit
+}
+@objcMembers @objc(PYKPayRequest) open class PYKPayRequest : ObjectiveC.NSObject {
+  @objc final public let channel: PayKit.PYKPayChannel
+  @objc public init(channel: PayKit.PYKPayChannel)
+  @objc deinit
+}
+@objcMembers @objc(PYKPayResult) final public class PYKPayResult : ObjectiveC.NSObject {
+  @objc final public let status: PayKit.PYKPayStatus
+  @objc final public let channel: PayKit.PYKPayChannel
+  @objc final public let error: PayKit.PYKPayError?
+  @objc final public let rawCode: Swift.String?
+  @objc final public let rawMessage: Swift.String?
+  @objc public init(status: PayKit.PYKPayStatus, channel: PayKit.PYKPayChannel, error: PayKit.PYKPayError? = nil, rawCode: Swift.String? = nil, rawMessage: Swift.String? = nil)
+  @objc deinit
+}
+@objc(PYKPayChannel) public enum PYKPayChannel : Swift.Int {
+  case unknown = 0
+  case wechat
+  case alipay
+  case mock
+  public init?(rawValue: Swift.Int)
+  public typealias RawValue = Swift.Int
+  public var rawValue: Swift.Int {
+    get
+  }
+}
+@objc(PYKPayStatus) public enum PYKPayStatus : Swift.Int {
+  case success = 0
+  case cancelled
+  case failed
+  public init?(rawValue: Swift.Int)
+  public typealias RawValue = Swift.Int
+  public var rawValue: Swift.Int {
+    get
+  }
+}
+@objcMembers @objc(PYKPaymentOption) final public class PYKPaymentOption : ObjectiveC.NSObject {
+  @objc final public let channel: PayKit.PYKPayChannel
+  @objc final public let title: Swift.String
+  @objc final public let subtitle: Swift.String?
+  @objc final public let isEnabled: Swift.Bool
+  @objc public init(channel: PayKit.PYKPayChannel, title: Swift.String, subtitle: Swift.String? = nil, isEnabled: Swift.Bool = true)
+  @objc public static func wechat(subtitle: Swift.String? = "亿万用户的选择，安全快速") -> PayKit.PYKPaymentOption
+  @objc public static func alipay(subtitle: Swift.String? = "数亿用户都在用，真安全") -> PayKit.PYKPaymentOption
+  @objc deinit
+}
+@objcMembers @objc(PYKPaymentSheetConfiguration) final public class PYKPaymentSheetConfiguration : ObjectiveC.NSObject {
+  @objc final public let title: Swift.String
+  @objc final public let amountText: Swift.String?
+  @objc final public let options: [PayKit.PYKPaymentOption]
+  @objc final public let confirmTitle: Swift.String
+  @objc final public let footnote: Swift.String?
+  @objc public init(title: Swift.String, amountText: Swift.String?, options: [PayKit.PYKPaymentOption], confirmTitle: Swift.String, footnote: Swift.String?)
+  @objc(standardConfigurationWithAmountText:) public static func standard(amountText: Swift.String? = nil) -> PayKit.PYKPaymentSheetConfiguration
+  @objc deinit
+}
+@objcMembers @objc(PYKWechatConfig) final public class PYKWechatConfig : ObjectiveC.NSObject {
+  @objc final public let appId: Swift.String
+  @objc final public let universalLink: Swift.String
+  @objc public init(appId: Swift.String, universalLink: Swift.String)
+  @objc deinit
+}
+@objcMembers @objc(PYKWechatPayRequest) final public class PYKWechatPayRequest : PayKit.PYKPayRequest {
+  @objc final public let appId: Swift.String
+  @objc final public let partnerId: Swift.String
+  @objc final public let prepayId: Swift.String
+  @objc final public let packageValue: Swift.String
+  @objc final public let nonceStr: Swift.String
+  @objc final public let timeStamp: Swift.String
+  @objc final public let sign: Swift.String
+  @objc public init(appId: Swift.String, partnerId: Swift.String, prepayId: Swift.String, packageValue: Swift.String, nonceStr: Swift.String, timeStamp: Swift.String, sign: Swift.String)
+  @objc deinit
+}
+extension PayKit.PYKPayKit {
+  @objc(presentPaymentSheetFromViewController:configuration:requestProvider:completion:) public static func presentPaymentSheet(from viewController: UIKit.UIViewController, configuration: PayKit.PYKPaymentSheetConfiguration, requestProvider: @escaping (PayKit.PYKPayChannel, @escaping (PayKit.PYKPayRequest?, (any Swift.Error)?) -> Swift.Void) -> Swift.Void, completion: @escaping (PayKit.PYKPayResult) -> Swift.Void)
+}
+extension PayKit.PYKPayKit {
+  public static func presentPaymentSheet(from viewController: UIKit.UIViewController, configuration: PayKit.PYKPaymentSheetConfiguration = .standard(), requestProvider: @escaping (PayKit.PYKPayChannel, @escaping (Swift.Result<PayKit.PYKPayRequest, any Swift.Error>) -> Swift.Void) -> Swift.Void, completion: @escaping (PayKit.PYKPayResult) -> Swift.Void)
+}
+public enum PayKitResult {
+  case success(PayKit.PYKPayResult)
+  case cancelled(PayKit.PYKPayResult)
+  case failed(PayKit.PYKPayResult)
+  public init(_ result: PayKit.PYKPayResult)
+  public var status: PayKit.PYKPayStatus {
+    get
+  }
+  public var result: PayKit.PYKPayResult {
+    get
+  }
+}
+extension PayKit.PYKPayChannel : Swift.Equatable {}
+extension PayKit.PYKPayChannel : Swift.Hashable {}
+extension PayKit.PYKPayChannel : Swift.RawRepresentable {}
+extension PayKit.PYKPayStatus : Swift.Equatable {}
+extension PayKit.PYKPayStatus : Swift.Hashable {}
+extension PayKit.PYKPayStatus : Swift.RawRepresentable {}
