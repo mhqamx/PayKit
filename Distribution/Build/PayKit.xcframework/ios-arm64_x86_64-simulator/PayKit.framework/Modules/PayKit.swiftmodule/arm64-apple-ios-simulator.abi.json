@@ -4956,37 +4956,23 @@
     {
       "filePath": "\/Users\/maxiao\/Desktop\/bmad\/sdk\/PayKit\/Sources\/PayKit\/Adapters\/WeChatPayAdapter.swift",
       "kind": "StringLiteral",
-      "offset": 3164,
-      "length": 10,
-      "value": "\"sendReq:\""
+      "offset": 3443,
+      "length": 21,
+      "value": "\"sendReq:completion:\""
     },
     {
       "filePath": "\/Users\/maxiao\/Desktop\/bmad\/sdk\/PayKit\/Sources\/PayKit\/Adapters\/WeChatPayAdapter.swift",
       "kind": "StringLiteral",
-      "offset": 3287,
+      "offset": 3577,
       "length": 25,
       "value": "\"wechat_send_unavailable\""
     },
     {
       "filePath": "\/Users\/maxiao\/Desktop\/bmad\/sdk\/PayKit\/Sources\/PayKit\/Adapters\/WeChatPayAdapter.swift",
       "kind": "StringLiteral",
-      "offset": 3326,
-      "length": 34,
-      "value": "\"WXApi sendReq: is not available.\""
-    },
-    {
-      "filePath": "\/Users\/maxiao\/Desktop\/bmad\/sdk\/PayKit\/Sources\/PayKit\/Adapters\/WeChatPayAdapter.swift",
-      "kind": "StringLiteral",
-      "offset": 3694,
-      "length": 22,
-      "value": "\"wechat_send_rejected\""
-    },
-    {
-      "filePath": "\/Users\/maxiao\/Desktop\/bmad\/sdk\/PayKit\/Sources\/PayKit\/Adapters\/WeChatPayAdapter.swift",
-      "kind": "StringLiteral",
-      "offset": 3730,
-      "length": 37,
-      "value": "\"WXApi rejected the payment request.\""
+      "offset": 3616,
+      "length": 45,
+      "value": "\"WXApi sendReq:completion: is not available.\""
     }
   ]
 }

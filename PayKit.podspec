@@ -1,6 +1,6 @@
 Pod::Spec.new do |s|
   s.name = 'PayKit'
-  s.version = '0.3.0'
+  s.version = '0.3.1'
   s.summary = 'iOS client payment SDK for WeChat Pay and Alipay.'
   s.description = 'PayKit wraps WeChat Pay and Alipay client launch, callback routing and result normalization.'
   s.homepage = 'https://github.com/mhqamx/PayKit'

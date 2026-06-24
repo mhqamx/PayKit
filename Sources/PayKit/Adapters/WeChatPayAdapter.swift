@@ -68,16 +68,18 @@ struct DynamicWeChatNativeClient: WeChatNativePaying {
     }
 
     private func send(apiClass: AnyClass, request: NSObject) -> NativeLaunchResult {
-        let selector = NSSelectorFromString("sendReq:")
+        // WechatOpenSDK 1.8.7+/2.x replaced `+sendReq:` (BOOL) with
+        // `+sendReq:completion:` (void + completion). The request is dispatched
+        // to WeChat here; the payment result arrives later via the WXApiDelegate
+        // `onResp:` / handleOpenURL callback.
+        let selector = NSSelectorFromString("sendReq:completion:")
         guard let method = class_getClassMethod(apiClass, selector) else {
-            return .failed(rawCode: "wechat_send_unavailable", rawMessage: "WXApi sendReq: is not available.")
+            return .failed(rawCode: "wechat_send_unavailable", rawMessage: "WXApi sendReq:completion: is not available.")
         }
-        typealias SendReq = @convention(c) (AnyClass, Selector, NSObject) -> ObjCBool
+        typealias SendReq = @convention(c) (AnyClass, Selector, NSObject, @convention(block) (ObjCBool) -> Void) -> Void
         let implementation = method_getImplementation(method)
         let sendReq = unsafeBitCast(implementation, to: SendReq.self)
-        guard sendReq(apiClass, selector, request).boolValue else {
-            return .failed(rawCode: "wechat_send_rejected", rawMessage: "WXApi rejected the payment request.")
-        }
+        sendReq(apiClass, selector, request, { _ in })
         return .accepted()
     }
 }
