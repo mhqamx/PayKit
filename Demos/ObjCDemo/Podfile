@@ -4,8 +4,8 @@ platform :ios, '15.0'
 use_frameworks! :linkage => :static
 
 target 'ObjCDemo' do
-  # Integrates the in-repository PayKit SDK. PayKit.podspec declares:
+  # Integrates the PayKit SDK from GitHub. PayKit.podspec declares:
   # - WechatOpenSDK-XCFramework
   # - AlipaySDK-iOS
-  pod 'PayKit', :path => '../..'
+  pod 'PayKit', :git => 'https://github.com/mhqamx/PayKit.git', :tag => '0.2.0'
 end

@@ -7,38 +7,40 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		4AE54CA092372246DB432C22 /* Pods_SwiftDemo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 80071F027FA74BFCD6A4108F /* Pods_SwiftDemo.framework */; };
+		365ACFF6F3FE371418B7DF29 /* Pods_SwiftDemo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7D9A8E2B360064B07C5B681E /* Pods_SwiftDemo.framework */; };
 		9D5228EE6D6F5B3F291F3EB8 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B58F1916B34245DB5D7E0B32 /* AppDelegate.swift */; };
 		A32C15F6ADB5434B0541615D /* PaymentViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB09CABF17CCE9DF9FE4A4AA /* PaymentViewController.swift */; };
 		AD08855B9CA338ED344F9E14 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 088C1E09E4432E5FC2A22BA7 /* SceneDelegate.swift */; };
+		E12D4E3311EC0EF251F8C3E1 /* DemoTheme.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E7A9CB631989298BA3037E0 /* DemoTheme.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		088C1E09E4432E5FC2A22BA7 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		5B8B9D96B0A1C01AEE9241D1 /* Pods-SwiftDemo.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SwiftDemo.release.xcconfig"; path = "Target Support Files/Pods-SwiftDemo/Pods-SwiftDemo.release.xcconfig"; sourceTree = "<group>"; };
-		69BB2B2690DA9096B08AC741 /* Pods-SwiftDemo.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SwiftDemo.debug.xcconfig"; path = "Target Support Files/Pods-SwiftDemo/Pods-SwiftDemo.debug.xcconfig"; sourceTree = "<group>"; };
-		80071F027FA74BFCD6A4108F /* Pods_SwiftDemo.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SwiftDemo.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		10B51E63149117120453CC84 /* Pods-SwiftDemo.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SwiftDemo.release.xcconfig"; path = "Target Support Files/Pods-SwiftDemo/Pods-SwiftDemo.release.xcconfig"; sourceTree = "<group>"; };
+		1E7A9CB631989298BA3037E0 /* DemoTheme.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DemoTheme.swift; sourceTree = "<group>"; };
+		5D40D31B8F0100675B000C93 /* Pods-SwiftDemo.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SwiftDemo.debug.xcconfig"; path = "Target Support Files/Pods-SwiftDemo/Pods-SwiftDemo.debug.xcconfig"; sourceTree = "<group>"; };
+		7D9A8E2B360064B07C5B681E /* Pods_SwiftDemo.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SwiftDemo.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		86BCAEF97BECA642354C0CF0 /* SwiftDemo.app */ = {isa = PBXFileReference; includeInIndex = 0; lastKnownFileType = wrapper.application; path = SwiftDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B58F1916B34245DB5D7E0B32 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		EB09CABF17CCE9DF9FE4A4AA /* PaymentViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PaymentViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
-		7F3A5C737E234CD8789FDA5B /* Frameworks */ = {
+		45E2C59D92F943EBE7642D57 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				4AE54CA092372246DB432C22 /* Pods_SwiftDemo.framework in Frameworks */,
+				365ACFF6F3FE371418B7DF29 /* Pods_SwiftDemo.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		10229A0BF265FD982B902EC7 /* Frameworks */ = {
+		86B8731A06F89AB4D2FE9252 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				80071F027FA74BFCD6A4108F /* Pods_SwiftDemo.framework */,
+				7D9A8E2B360064B07C5B681E /* Pods_SwiftDemo.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -48,29 +50,30 @@
 			children = (
 				D45FB6CF0DBEB390A5A172DF /* Sources */,
 				F274F07DFEEC713532142586 /* Products */,
-				A42C3C2945863D8A86A0C7EE /* Pods */,
-				10229A0BF265FD982B902EC7 /* Frameworks */,
+				DE2B2E0F5B57C0A60E66EE7F /* Pods */,
+				86B8731A06F89AB4D2FE9252 /* Frameworks */,
 			);
-			sourceTree = "<group>";
-		};
-		A42C3C2945863D8A86A0C7EE /* Pods */ = {
-			isa = PBXGroup;
-			children = (
-				69BB2B2690DA9096B08AC741 /* Pods-SwiftDemo.debug.xcconfig */,
-				5B8B9D96B0A1C01AEE9241D1 /* Pods-SwiftDemo.release.xcconfig */,
-			);
-			name = Pods;
-			path = Pods;
 			sourceTree = "<group>";
 		};
 		D45FB6CF0DBEB390A5A172DF /* Sources */ = {
 			isa = PBXGroup;
 			children = (
 				B58F1916B34245DB5D7E0B32 /* AppDelegate.swift */,
+				1E7A9CB631989298BA3037E0 /* DemoTheme.swift */,
 				EB09CABF17CCE9DF9FE4A4AA /* PaymentViewController.swift */,
 				088C1E09E4432E5FC2A22BA7 /* SceneDelegate.swift */,
 			);
 			path = Sources;
+			sourceTree = "<group>";
+		};
+		DE2B2E0F5B57C0A60E66EE7F /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				5D40D31B8F0100675B000C93 /* Pods-SwiftDemo.debug.xcconfig */,
+				10B51E63149117120453CC84 /* Pods-SwiftDemo.release.xcconfig */,
+			);
+			name = Pods;
+			path = Pods;
 			sourceTree = "<group>";
 		};
 		F274F07DFEEC713532142586 /* Products */ = {
@@ -88,10 +91,10 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 4CB5DF7D8B85FC0104EA5EEA /* Build configuration list for PBXNativeTarget "SwiftDemo" */;
 			buildPhases = (
-				06B61EC06216BC1FA3232EBE /* [CP] Check Pods Manifest.lock */,
+				B4E30F14F3E8488FA839C5B9 /* [CP] Check Pods Manifest.lock */,
 				352A70EEA894C8CBFB4890B7 /* Sources */,
-				7F3A5C737E234CD8789FDA5B /* Frameworks */,
-				060D7C5C2D39018A8EC055ED /* [CP] Copy Pods Resources */,
+				45E2C59D92F943EBE7642D57 /* Frameworks */,
+				92738EE2BC87AA7D6639F3E5 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -133,7 +136,7 @@
 /* End PBXProject section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		060D7C5C2D39018A8EC055ED /* [CP] Copy Pods Resources */ = {
+		92738EE2BC87AA7D6639F3E5 /* [CP] Copy Pods Resources */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -150,7 +153,7 @@
 			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-SwiftDemo/Pods-SwiftDemo-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
-		06B61EC06216BC1FA3232EBE /* [CP] Check Pods Manifest.lock */ = {
+		B4E30F14F3E8488FA839C5B9 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -180,6 +183,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				9D5228EE6D6F5B3F291F3EB8 /* AppDelegate.swift in Sources */,
+				E12D4E3311EC0EF251F8C3E1 /* DemoTheme.swift in Sources */,
 				A32C15F6ADB5434B0541615D /* PaymentViewController.swift in Sources */,
 				AD08855B9CA338ED344F9E14 /* SceneDelegate.swift in Sources */,
 			);
@@ -246,7 +250,7 @@
 		};
 		46ECC2D3CE5AF560F7A57F72 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 5B8B9D96B0A1C01AEE9241D1 /* Pods-SwiftDemo.release.xcconfig */;
+			baseConfigurationReference = 10B51E63149117120453CC84 /* Pods-SwiftDemo.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
@@ -266,7 +270,7 @@
 		};
 		718582EDCB511600491078FD /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 69BB2B2690DA9096B08AC741 /* Pods-SwiftDemo.debug.xcconfig */;
+			baseConfigurationReference = 5D40D31B8F0100675B000C93 /* Pods-SwiftDemo.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Developer";

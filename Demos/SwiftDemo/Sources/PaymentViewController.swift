@@ -5,289 +5,294 @@ enum DemoConfig {
     static let wechatAppId = "wx-app-id"
     static let wechatUniversalLink = "https://example.com/app/"
     static let alipayScheme = "paykit-demo"
+
+    // Channel payloads are demo defaults. In a real integration the app sends an
+    // order to its backend and receives these channel-specific parameters.
+    static let alipayOrderString = "app_id=demo&method=alipay.trade.app.pay&charset=utf-8&sign=demo"
+    static let wechatPrepayId = "wx-prepay-id"
 }
 
-final class PaymentViewController: UIViewController, UITextViewDelegate {
+final class PaymentViewController: UIViewController, UITextFieldDelegate {
     private let scrollView = UIScrollView()
-    private let contentStack = UIStackView()
-    private let alipayOrderInput = UITextView()
-    private let wechatPrepayInput = UITextView()
-    private let resultView = UITextView()
-    private var alipayHeightConstraint: NSLayoutConstraint?
-    private var wechatHeightConstraint: NSLayoutConstraint?
+    private let amountField = UITextField()
+    private let resultIndicator = UIView()
+    private let resultTitle = UILabel()
+    private let resultBody = UILabel()
+    private let resultCard = DemoTheme.card()
+
+    private var amountText: String {
+        let raw = (amountField.text ?? "").trimmingCharacters(in: .whitespaces)
+        let value = raw.isEmpty ? "0.01" : raw
+        return "¥ \(value)"
+    }
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        title = "PayKit 集成示例"
-        view.backgroundColor = .systemGroupedBackground
+        title = "PayKit"
+        overrideUserInterfaceStyle = .dark
+        view.backgroundColor = DemoTheme.canvas
+        configureNavigationBar()
         buildInterface()
-        updateInputHeights()
+
+        let tap = UITapGestureRecognizer(target: self, action: #selector(dismissKeyboard))
+        tap.cancelsTouchesInView = false
+        view.addGestureRecognizer(tap)
     }
 
-    override func viewDidLayoutSubviews() {
-        super.viewDidLayoutSubviews()
-        updateInputHeights()
+    private func configureNavigationBar() {
+        let appearance = UINavigationBarAppearance()
+        appearance.configureWithOpaqueBackground()
+        appearance.backgroundColor = DemoTheme.canvas
+        appearance.shadowColor = .clear
+        appearance.titleTextAttributes = [
+            .foregroundColor: DemoTheme.textPrimary,
+            .font: DemoTheme.rounded(17, .bold)
+        ]
+        navigationItem.standardAppearance = appearance
+        navigationItem.scrollEdgeAppearance = appearance
     }
+
+    // MARK: Layout
 
     private func buildInterface() {
         scrollView.keyboardDismissMode = .interactive
+        scrollView.alwaysBounceVertical = true
         scrollView.translatesAutoresizingMaskIntoConstraints = false
         view.addSubview(scrollView)
 
-        contentStack.axis = .vertical
-        contentStack.spacing = 18
-        contentStack.translatesAutoresizingMaskIntoConstraints = false
-        scrollView.addSubview(contentStack)
+        let content = UIStackView()
+        content.axis = .vertical
+        content.spacing = 16
+        content.translatesAutoresizingMaskIntoConstraints = false
+        scrollView.addSubview(content)
 
+        let pad = DemoTheme.pagePadding
         NSLayoutConstraint.activate([
             scrollView.leadingAnchor.constraint(equalTo: view.leadingAnchor),
             scrollView.trailingAnchor.constraint(equalTo: view.trailingAnchor),
             scrollView.topAnchor.constraint(equalTo: view.safeAreaLayoutGuide.topAnchor),
             scrollView.bottomAnchor.constraint(equalTo: view.bottomAnchor),
-            contentStack.leadingAnchor.constraint(equalTo: scrollView.frameLayoutGuide.leadingAnchor, constant: 16),
-            contentStack.trailingAnchor.constraint(equalTo: scrollView.frameLayoutGuide.trailingAnchor, constant: -16),
-            contentStack.topAnchor.constraint(equalTo: scrollView.contentLayoutGuide.topAnchor, constant: 18),
-            contentStack.bottomAnchor.constraint(equalTo: scrollView.contentLayoutGuide.bottomAnchor, constant: -24)
+            content.leadingAnchor.constraint(equalTo: scrollView.frameLayoutGuide.leadingAnchor, constant: pad),
+            content.trailingAnchor.constraint(equalTo: scrollView.frameLayoutGuide.trailingAnchor, constant: -pad),
+            content.topAnchor.constraint(equalTo: scrollView.contentLayoutGuide.topAnchor, constant: 8),
+            content.bottomAnchor.constraint(equalTo: scrollView.contentLayoutGuide.bottomAnchor, constant: -32)
         ])
 
-        contentStack.addArrangedSubview(headerView())
-        contentStack.addArrangedSubview(inputSection(
-            title: "支付宝支付",
-            detail: "填写后端返回的完整 orderString，Demo 会通过 PayKit 调用支付宝 SDK。",
-            inputTitle: "orderString",
-            input: alipayOrderInput,
-            buttonTitle: "发起支付宝支付",
-            action: #selector(startAlipay)
-        ))
-        contentStack.addArrangedSubview(inputSection(
-            title: "微信支付",
-            detail: "当前示例保留 prepayId 输入，其余微信字段使用 Demo 默认值，实际接入时应全部来自后端。",
-            inputTitle: "prepayId",
-            input: wechatPrepayInput,
-            buttonTitle: "发起微信支付",
-            action: #selector(startWeChatPay)
-        ))
-        contentStack.addArrangedSubview(resultSection())
+        content.addArrangedSubview(heroCard())
+        content.addArrangedSubview(orderCard())
+        content.addArrangedSubview(configureResultCard())
 
-        configureInput(
-            alipayOrderInput,
-            text: "app_id=demo&method=alipay.trade.app.pay&charset=utf-8&sign=demo",
-            accessibilityLabel: "支付宝订单字符串"
-        )
-        configureInput(
-            wechatPrepayInput,
-            text: "wx-prepay-id",
-            accessibilityLabel: "微信预支付订单号"
-        )
+        let payButton = DemoTheme.primaryButton(title: "去支付")
+        payButton.translatesAutoresizingMaskIntoConstraints = false
+        payButton.addTarget(self, action: #selector(presentPaymentSheet), for: .touchUpInside)
+        content.addArrangedSubview(payButton)
+        content.setCustomSpacing(22, after: resultCard)
+        payButton.heightAnchor.constraint(greaterThanOrEqualToConstant: 56).isActive = true
     }
 
-    private func headerView() -> UIView {
-        let stack = UIStackView()
+    private func heroCard() -> UIView {
+        let wordmark = UILabel()
+        wordmark.text = "PayKit"
+        wordmark.font = DemoTheme.rounded(26, .heavy)
+        wordmark.textColor = DemoTheme.textPrimary
+
+        let chip = PaddedLabel()
+        chip.text = "DEMO"
+        chip.font = DemoTheme.rounded(11, .bold)
+        chip.textColor = DemoTheme.accent
+        chip.backgroundColor = DemoTheme.accent.withAlphaComponent(0.14)
+        chip.layer.cornerRadius = 7
+        chip.layer.cornerCurve = .continuous
+        chip.clipsToBounds = true
+        chip.setContentHuggingPriority(.required, for: .horizontal)
+
+        let topRow = UIStackView(arrangedSubviews: [wordmark, chip])
+        topRow.axis = .horizontal
+        topRow.alignment = .center
+        topRow.spacing = 10
+
+        let subtitle = UILabel()
+        subtitle.text = "客户接入参考收银台。SDK 只负责微信 / 支付宝调用、回调转发与结果归一，最终订单状态以业务后台为准。"
+        subtitle.font = DemoTheme.text(13, .regular)
+        subtitle.textColor = DemoTheme.textSecondary
+        subtitle.numberOfLines = 0
+
+        let stack = UIStackView(arrangedSubviews: [topRow, subtitle])
         stack.axis = .vertical
         stack.spacing = 8
-
-        let titleLabel = UILabel()
-        titleLabel.text = "PayKit 支付 SDK Demo"
-        titleLabel.font = .preferredFont(forTextStyle: .title2)
-        titleLabel.adjustsFontForContentSizeCategory = true
-
-        let subtitleLabel = UILabel()
-        subtitleLabel.text = "这是客户接入参考页面，不是 SDK 内置收银台。PayKit SDK 只负责微信/支付宝支付调用、回调转发和结果归一。"
-        subtitleLabel.font = .preferredFont(forTextStyle: .body)
-        subtitleLabel.textColor = .secondaryLabel
-        subtitleLabel.numberOfLines = 0
-        subtitleLabel.adjustsFontForContentSizeCategory = true
-
-        stack.addArrangedSubview(titleLabel)
-        stack.addArrangedSubview(subtitleLabel)
-        return card(stack)
+        return wrap(stack, in: DemoTheme.card())
     }
 
-    private func inputSection(
-        title: String,
-        detail: String,
-        inputTitle: String,
-        input: UITextView,
-        buttonTitle: String,
-        action: Selector
-    ) -> UIView {
-        let stack = UIStackView()
-        stack.axis = .vertical
-        stack.spacing = 12
+    private func orderCard() -> UIView {
+        let label = UILabel()
+        label.text = "订单金额"
+        label.font = DemoTheme.text(13, .medium)
+        label.textColor = DemoTheme.textSecondary
 
-        let titleLabel = UILabel()
-        titleLabel.text = title
-        titleLabel.font = .preferredFont(forTextStyle: .headline)
-        titleLabel.adjustsFontForContentSizeCategory = true
+        let currency = UILabel()
+        currency.text = "¥"
+        currency.font = DemoTheme.rounded(34, .bold)
+        currency.textColor = DemoTheme.textPrimary
+        currency.setContentHuggingPriority(.required, for: .horizontal)
 
-        let detailLabel = UILabel()
-        detailLabel.text = detail
-        detailLabel.font = .preferredFont(forTextStyle: .footnote)
-        detailLabel.textColor = .secondaryLabel
-        detailLabel.numberOfLines = 0
-        detailLabel.adjustsFontForContentSizeCategory = true
+        amountField.text = "0.01"
+        amountField.font = DemoTheme.rounded(40, .heavy)
+        amountField.textColor = DemoTheme.textPrimary
+        amountField.tintColor = DemoTheme.accent
+        amountField.keyboardType = .decimalPad
+        amountField.borderStyle = .none
+        amountField.delegate = self
+        amountField.attributedPlaceholder = NSAttributedString(
+            string: "0.00",
+            attributes: [.foregroundColor: DemoTheme.textTertiary]
+        )
 
-        let fieldLabel = UILabel()
-        fieldLabel.text = inputTitle
-        fieldLabel.font = .preferredFont(forTextStyle: .subheadline)
-        fieldLabel.textColor = .secondaryLabel
-        fieldLabel.adjustsFontForContentSizeCategory = true
+        let amountRow = UIStackView(arrangedSubviews: [currency, amountField])
+        amountRow.axis = .horizontal
+        amountRow.alignment = .firstBaseline
+        amountRow.spacing = 6
 
-        let button = UIButton(type: .system)
-        button.titleLabel?.font = .preferredFont(forTextStyle: .headline)
-        var configuration = UIButton.Configuration.filled()
-        configuration.title = buttonTitle
-        configuration.baseBackgroundColor = .systemBlue
-        configuration.baseForegroundColor = .white
-        configuration.cornerStyle = .medium
-        configuration.contentInsets = NSDirectionalEdgeInsets(top: 12, leading: 16, bottom: 12, trailing: 16)
-        button.configuration = configuration
-        button.addTarget(self, action: action, for: .touchUpInside)
+        let divider = UIView()
+        divider.backgroundColor = DemoTheme.cardBorder
+        divider.heightAnchor.constraint(equalToConstant: 1).isActive = true
 
-        stack.addArrangedSubview(titleLabel)
-        stack.addArrangedSubview(detailLabel)
-        stack.addArrangedSubview(fieldLabel)
-        stack.addArrangedSubview(input)
-        stack.addArrangedSubview(button)
+        let note = UILabel()
+        note.text = "订单号  PK202606240001 · 测试沙箱"
+        note.font = DemoTheme.text(12, .regular)
+        note.textColor = DemoTheme.textTertiary
 
-        return card(stack)
-    }
-
-    private func resultSection() -> UIView {
-        let stack = UIStackView()
+        let stack = UIStackView(arrangedSubviews: [label, amountRow, divider, note])
         stack.axis = .vertical
         stack.spacing = 10
-
-        let titleLabel = UILabel()
-        titleLabel.text = "支付结果"
-        titleLabel.font = .preferredFont(forTextStyle: .headline)
-
-        resultView.isEditable = false
-        resultView.isScrollEnabled = false
-        resultView.font = .preferredFont(forTextStyle: .body)
-        resultView.textColor = .label
-        resultView.backgroundColor = .tertiarySystemGroupedBackground
-        resultView.layer.cornerRadius = 8
-        resultView.textContainerInset = UIEdgeInsets(top: 12, left: 10, bottom: 12, right: 10)
-        resultView.text = "支付回调结果会显示在这里。客户端 success 只代表渠道客户端流程成功，最终订单状态仍需以业务后台确认为准。"
-        resultView.heightAnchor.constraint(greaterThanOrEqualToConstant: 120).isActive = true
-
-        stack.addArrangedSubview(titleLabel)
-        stack.addArrangedSubview(resultView)
-        return card(stack)
+        stack.setCustomSpacing(16, after: amountRow)
+        stack.setCustomSpacing(12, after: divider)
+        return wrap(stack, in: DemoTheme.card())
     }
 
-    private func card(_ content: UIView) -> UIView {
-        let container = UIView()
-        container.backgroundColor = .secondarySystemGroupedBackground
-        container.layer.cornerRadius = 8
-        container.translatesAutoresizingMaskIntoConstraints = false
+    private func configureResultCard() -> UIView {
+        let header = UILabel()
+        header.text = "支付结果"
+        header.font = DemoTheme.text(13, .medium)
+        header.textColor = DemoTheme.textSecondary
+
+        resultIndicator.backgroundColor = DemoTheme.textTertiary
+        resultIndicator.layer.cornerRadius = 4
+        resultIndicator.translatesAutoresizingMaskIntoConstraints = false
+        resultIndicator.widthAnchor.constraint(equalToConstant: 8).isActive = true
+        resultIndicator.heightAnchor.constraint(equalToConstant: 8).isActive = true
+
+        resultTitle.text = "等待支付"
+        resultTitle.font = DemoTheme.rounded(18, .bold)
+        resultTitle.textColor = DemoTheme.textPrimary
+
+        let statusRow = UIStackView(arrangedSubviews: [resultIndicator, resultTitle])
+        statusRow.axis = .horizontal
+        statusRow.alignment = .center
+        statusRow.spacing = 8
+
+        resultBody.text = "点击「去支付」选择渠道后，回调结果会显示在这里。"
+        resultBody.font = DemoTheme.text(13, .regular)
+        resultBody.textColor = DemoTheme.textSecondary
+        resultBody.numberOfLines = 0
+
+        let stack = UIStackView(arrangedSubviews: [header, statusRow, resultBody])
+        stack.axis = .vertical
+        stack.spacing = 8
+        stack.setCustomSpacing(10, after: header)
+        return wrap(stack, in: resultCard)
+    }
+
+    private func wrap(_ content: UIView, in container: UIView) -> UIView {
         content.translatesAutoresizingMaskIntoConstraints = false
         container.addSubview(content)
         NSLayoutConstraint.activate([
-            content.leadingAnchor.constraint(equalTo: container.leadingAnchor, constant: 16),
-            content.trailingAnchor.constraint(equalTo: container.trailingAnchor, constant: -16),
-            content.topAnchor.constraint(equalTo: container.topAnchor, constant: 16),
-            content.bottomAnchor.constraint(equalTo: container.bottomAnchor, constant: -16)
+            content.leadingAnchor.constraint(equalTo: container.leadingAnchor, constant: 18),
+            content.trailingAnchor.constraint(equalTo: container.trailingAnchor, constant: -18),
+            content.topAnchor.constraint(equalTo: container.topAnchor, constant: 18),
+            content.bottomAnchor.constraint(equalTo: container.bottomAnchor, constant: -18)
         ])
         return container
     }
 
-    private func configureInput(_ input: UITextView, text: String, accessibilityLabel: String) {
-        input.text = text
-        input.font = .preferredFont(forTextStyle: .body)
-        input.adjustsFontForContentSizeCategory = true
-        input.backgroundColor = .tertiarySystemGroupedBackground
-        input.textColor = .label
-        input.layer.cornerRadius = 8
-        input.layer.borderWidth = 1
-        input.layer.borderColor = UIColor.separator.cgColor
-        input.textContainerInset = UIEdgeInsets(top: 10, left: 8, bottom: 10, right: 8)
-        input.autocapitalizationType = .none
-        input.autocorrectionType = .no
-        input.isScrollEnabled = false
-        input.delegate = self
-        input.accessibilityLabel = accessibilityLabel
+    // MARK: Actions
 
-        let height = input.heightAnchor.constraint(equalToConstant: 52)
-        height.priority = .required
-        height.isActive = true
-        if input === alipayOrderInput {
-            alipayHeightConstraint = height
-        } else if input === wechatPrepayInput {
-            wechatHeightConstraint = height
-        }
+    @objc private func dismissKeyboard() {
+        view.endEditing(true)
     }
 
-    func textViewDidChange(_ textView: UITextView) {
-        updateHeight(for: textView)
-    }
-
-    private func updateInputHeights() {
-        updateHeight(for: alipayOrderInput)
-        updateHeight(for: wechatPrepayInput)
-    }
-
-    private func updateHeight(for textView: UITextView) {
-        let width = max(textView.bounds.width, view.bounds.width - 64)
-        let targetSize = CGSize(width: width, height: CGFloat.greatestFiniteMagnitude)
-        let fittingHeight = textView.sizeThatFits(targetSize).height
-        let newHeight = min(max(fittingHeight, 52), 180)
-        textView.isScrollEnabled = fittingHeight > 180
-        if textView === alipayOrderInput {
-            alipayHeightConstraint?.constant = newHeight
-        } else if textView === wechatPrepayInput {
-            wechatHeightConstraint?.constant = newHeight
-        }
-    }
-
-    @objc private func startAlipay() {
-        let request = PYKAlipayPayRequest(
-            orderString: alipayOrderInput.text ?? "",
-            appScheme: DemoConfig.alipayScheme
-        )
-        PayKit.pay(request: request) { [weak self] result in
-            DispatchQueue.main.async {
-                self?.show(result: result)
+    @objc private func presentPaymentSheet() {
+        view.endEditing(true)
+        // SDK-owned standard payment sheet (Story 5.2). The SDK presents the
+        // bottom sheet; once a channel is picked it asks us for the matching
+        // request via the provider, then reuses the unified pay path.
+        let configuration = PYKPaymentSheetConfiguration.standard(amountText: amountText)
+        PayKit.presentPaymentSheet(
+            from: self,
+            configuration: configuration,
+            requestProvider: { [weak self] channel, provide in
+                guard let self = self else { return }
+                self.showPending()
+                // In a real app, fetch channel parameters from your backend here.
+                provide(.success(self.demoRequest(for: channel)))
+            },
+            completion: { [weak self] result in
+                DispatchQueue.main.async {
+                    self?.show(result: result)
+                }
             }
+        )
+    }
+
+    private func demoRequest(for channel: PYKPayChannel) -> PYKPayRequest {
+        switch channel {
+        case .alipay:
+            return PYKAlipayPayRequest(
+                orderString: DemoConfig.alipayOrderString,
+                appScheme: DemoConfig.alipayScheme
+            )
+        default:
+            return PYKWechatPayRequest(
+                appId: DemoConfig.wechatAppId,
+                partnerId: "partner-id",
+                prepayId: DemoConfig.wechatPrepayId,
+                packageValue: "Sign=WXPay",
+                nonceStr: "nonce-from-backend",
+                timeStamp: "1700000000",
+                sign: "sign-from-backend"
+            )
         }
     }
 
-    @objc private func startWeChatPay() {
-        let request = PYKWechatPayRequest(
-            appId: DemoConfig.wechatAppId,
-            partnerId: "partner-id",
-            prepayId: wechatPrepayInput.text ?? "",
-            packageValue: "Sign=WXPay",
-            nonceStr: "nonce-from-backend",
-            timeStamp: "1700000000",
-            sign: "sign-from-backend"
-        )
-        PayKit.pay(request: request) { [weak self] result in
-            DispatchQueue.main.async {
-                self?.show(result: result)
-            }
-        }
+    private func showPending() {
+        resultIndicator.backgroundColor = DemoTheme.cancelled
+        resultTitle.text = "支付进行中…"
+        resultBody.text = "已通过 PayKit 拉起渠道客户端，等待回调。"
     }
 
     private func show(result: PYKPayResult) {
-        let status: String
+        let color: UIColor
+        let statusText: String
         switch result.status {
         case .success:
-            status = "成功"
+            color = DemoTheme.success
+            statusText = "支付成功"
         case .cancelled:
-            status = "已取消"
+            color = DemoTheme.cancelled
+            statusText = "已取消"
         case .failed:
-            status = "失败"
+            color = DemoTheme.failure
+            statusText = "支付失败"
         @unknown default:
-            status = "未知"
+            color = DemoTheme.textTertiary
+            statusText = "未知状态"
         }
-        resultView.text = [
-            "状态：\(status)",
+        resultIndicator.backgroundColor = color
+        resultTitle.text = statusText
+        resultBody.text = [
             "渠道：\(channelName(result.channel))",
             "原始码：\(result.rawCode ?? "-")",
             "原始信息：\(result.rawMessage ?? "-")",
-            "说明：客户端成功不等于订单最终成功，请以业务后台确认结果为准。"
+            "说明：客户端成功不等于订单最终成功，请以业务后台确认为准。"
         ].joined(separator: "\n")
     }
 
@@ -302,5 +307,27 @@ final class PaymentViewController: UIViewController, UITextViewDelegate {
         default:
             return "未知通道"
         }
+    }
+
+    // MARK: UITextFieldDelegate
+
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        textField.resignFirstResponder()
+        return true
+    }
+}
+
+/// Label with internal padding, used for the inline "DEMO" chip.
+private final class PaddedLabel: UILabel {
+    private let insets = UIEdgeInsets(top: 3, left: 8, bottom: 3, right: 8)
+
+    override func drawText(in rect: CGRect) {
+        super.drawText(in: rect.inset(by: insets))
+    }
+
+    override var intrinsicContentSize: CGSize {
+        let size = super.intrinsicContentSize
+        return CGSize(width: size.width + insets.left + insets.right,
+                      height: size.height + insets.top + insets.bottom)
     }
 }
