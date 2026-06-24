@@ -258,15 +258,7 @@ final class PYKChannelRow: UIControl {
         isEnabled = option.isEnabled
         alpha = option.isEnabled ? 1 : 0.45
 
-        let badge = UILabel()
-        badge.text = PYKSheetStyle.badgeText(for: option)
-        badge.font = PYKSheetStyle.rounded(18, .bold)
-        badge.textColor = .white
-        badge.textAlignment = .center
-        badge.backgroundColor = PYKSheetStyle.badgeColor(for: option.channel)
-        badge.layer.cornerRadius = 11
-        badge.layer.cornerCurve = .continuous
-        badge.clipsToBounds = true
+        let badge = PYKSheetStyle.badgeView(for: option)
         badge.translatesAutoresizingMaskIntoConstraints = false
 
         let titleLabel = UILabel()
@@ -363,6 +355,63 @@ enum PYKSheetStyle {
 
     static func text(_ size: CGFloat, _ weight: UIFont.Weight) -> UIFont {
         UIFont.systemFont(ofSize: size, weight: weight)
+    }
+
+    /// Channel badge: a bundled icon image when available, otherwise a colored
+    /// monogram fallback (custom channels, or missing resources).
+    static func badgeView(for option: PYKPaymentOption) -> UIView {
+        let size: CGFloat = 38
+        if let image = channelImage(for: option.channel) {
+            let imageView = UIImageView(image: image)
+            imageView.contentMode = .scaleAspectFit
+            imageView.layer.cornerRadius = size / 2
+            imageView.layer.cornerCurve = .continuous
+            imageView.clipsToBounds = true
+            return imageView
+        }
+
+        let label = UILabel()
+        label.text = badgeText(for: option)
+        label.font = rounded(18, .bold)
+        label.textColor = .white
+        label.textAlignment = .center
+        label.backgroundColor = badgeColor(for: option.channel)
+        label.layer.cornerRadius = 11
+        label.layer.cornerCurve = .continuous
+        label.clipsToBounds = true
+        return label
+    }
+
+    static func channelImage(for channel: PYKPayChannel) -> UIImage? {
+        switch channel {
+        case .wechat: return image(named: "paykit_wechat")
+        case .alipay: return image(named: "paykit_alipay")
+        default: return nil
+        }
+    }
+
+    static func image(named name: String) -> UIImage? {
+        let bundle = resourceBundle
+        if let url = bundle.url(forResource: name, withExtension: "png"),
+           let image = UIImage(contentsOfFile: url.path) {
+            return image
+        }
+        return UIImage(named: name, in: bundle, compatibleWith: nil)
+    }
+
+    /// Locates the SDK resource bundle across build systems: SwiftPM's generated
+    /// `Bundle.module`, or the CocoaPods `PayKit.bundle` resource bundle.
+    static var resourceBundle: Bundle {
+        #if SWIFT_PACKAGE
+        return .module
+        #else
+        let base = Bundle(for: PYKPaymentSheetViewController.self)
+        if let url = base.url(forResource: "PayKit", withExtension: "bundle"),
+           let bundle = Bundle(url: url) {
+            return bundle
+        }
+        return base
+        #endif
     }
 
     static func badgeColor(for channel: PYKPayChannel) -> UIColor {

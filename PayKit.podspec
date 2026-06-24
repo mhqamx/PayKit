@@ -1,6 +1,6 @@
 Pod::Spec.new do |s|
   s.name = 'PayKit'
-  s.version = '0.2.0'
+  s.version = '0.2.1'
   s.summary = 'iOS client payment SDK for WeChat Pay and Alipay.'
   s.description = 'PayKit wraps WeChat Pay and Alipay client launch, callback routing and result normalization.'
   s.homepage = 'https://github.com/mhqamx/PayKit'
@@ -12,6 +12,7 @@ Pod::Spec.new do |s|
   s.static_framework = true
   s.source_files = 'Sources/PayKit/**/*.{swift,h,m}'
   s.exclude_files = ['Tests/**/*', 'Demos/**/*']
+  s.resource_bundles = { 'PayKit' => ['Sources/PayKit/Resources/*.png'] }
   s.dependency 'WechatOpenSDK-XCFramework', '~> 2.0.5'
   s.dependency 'AlipaySDK-iOS', '~> 15.8.30'
 end

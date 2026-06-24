@@ -17,7 +17,8 @@ let package = Package(
     targets: [
         .target(
             name: "PayKit",
-            path: "Sources/PayKit"
+            path: "Sources/PayKit",
+            resources: [.process("Resources")]
         ),
         .testTarget(
             name: "PayKitTests",
