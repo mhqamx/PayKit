@@ -1,12 +1,12 @@
 PODS:
   - AlipaySDK-iOS (15.8.30)
-  - PayKit (0.1.0):
+  - PayKit (0.2.0):
     - AlipaySDK-iOS (~> 15.8.30)
     - WechatOpenSDK-XCFramework (~> 2.0.5)
   - WechatOpenSDK-XCFramework (2.0.5)
 
 DEPENDENCIES:
-  - PayKit (from `../..`)
+  - PayKit (from `https://github.com/mhqamx/PayKit.git`, tag `0.2.0`)
 
 SPEC REPOS:
   trunk:
@@ -15,13 +15,19 @@ SPEC REPOS:
 
 EXTERNAL SOURCES:
   PayKit:
-    :path: "../.."
+    :git: https://github.com/mhqamx/PayKit.git
+    :tag: 0.2.0
+
+CHECKOUT OPTIONS:
+  PayKit:
+    :git: https://github.com/mhqamx/PayKit.git
+    :tag: 0.2.0
 
 SPEC CHECKSUMS:
   AlipaySDK-iOS: 913a1df564c64798903e71cf3d63141d9e1904d2
-  PayKit: 4c538dcced710020f0729dc85351e2ecf3ddadff
+  PayKit: fca1eee234cb9db1629f1f11bd607c282db593cd
   WechatOpenSDK-XCFramework: ff342ae616bb86df3d236aca38059dfd4bc4a949
 
-PODFILE CHECKSUM: 88276df2ea40b933f3bf786cd801c07e9f736e42
+PODFILE CHECKSUM: 4b4797907df6b35d0459bab660c2287dff08d03a
 
 COCOAPODS: 1.16.2
